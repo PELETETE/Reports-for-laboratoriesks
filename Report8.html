@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="PELE TETE" />
+  <title>LABORATORY08: Report and Presentation of work on TikZ</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">LABORATORY08: Report and Presentation of work on
+TikZ</h1>
+<p class="author">PELE TETE</p>
+<p class="date">December 2025</p>
+</header>
+<h1 id="sec:801">801TikZ - Basic LaTeX Document</h1>
+<pre><code>\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+\section{This is a simple introduction to TikZ}
+There is a variety of different toolsets for creating graphical objects in a TeX doc
+ument. Themostwellknownandprobablymostwidelyusedofthesetoolsetsis
+TikZ, which is a recursive acronym for “TikZ ist kein Zeichenprogramm” (German
+for TikZ is not a drawing programme). Fromthenameofthetoolsetyoucansee
+that generating a figure in TikZ will not work through drawing the figure like you
+might befamiliar with doing in Paint or similar drawing programmes. To create a
+figure using TikZ we will need to code it by using specific TeX commands. We will
+take a look at the basics of TikZ here.
+Three useful references and sources of inspiration for creating TikZ figure are:
+
+• TheWikibooksentryonTikZ:https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ.
+• TheCTANentryonTikZwiththeofficialhandbookandotherdocumentation:
+https://www.ctan.org/pkg/pgf.
+
+• TheTeXampleTikZdatabasefullofexamplesandinspiration: https://texa
+mple.net/tikz/.
+
+My work is extremely based on the first link. In the following lines, 
+we will see how we can code by using TikZ.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation">Generated figure
+(simulation)</h2>
+<p>Standard text document without TikZ graphics.</p>
+<h2 class="unnumbered" id="imported-image">Imported image</h2>
+<div class="center">
+<p><img src="801TikZ.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:802">802TikZ.tex - Introduction to key concepts</h1>
+<pre><code>\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+In this section, we will talking about five(05) Importants keys.
+To succeed to work from TikZ
+First to remember to start coding by \usepackage{tikz}
+second use \begin{figure} this helps us make the reference.
+third use \begin{tikzpicture} in other to manage the graphic.
+fouth never forget to close by \end{tikzpicture}
+at the and we have the rule the use of semicolon(&#39;;&#39;).
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation-1">Generated
+figure (simulation)</h2>
+<p>Explanatory text about TikZ.</p>
+<h2 class="unnumbered" id="screenshot">Screenshot</h2>
+<div class="center">
+<p><img src="802TikZ.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:803">803TikZDrawinglines - Drawing simple lines</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\draw (-1,0) -- (3,10pt) -- (35:3);
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-1">Screenshot</h2>
+<div class="center">
+<p><img src="803TikZDrawinglines.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:804">804TikZDrawinglines - Line styles</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\draw[-&gt;] (-1,0) -| (3,10pt);
+\draw[red] (3,10pt) -- (35:3);
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-1">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-2">Screenshot</h2>
+<div class="center">
+<p><img src="804TikZDrawinglines.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:805">805TikZDrawinglines - Curves with controls</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\draw (-1,0) to (5,1);
+\draw[green] (-1,0) to[out=90,in=135] (5,1);
+\draw[cyan] (-1,0) .. controls (0,-2) .. (5,1);
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-2">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-3">Screenshot</h2>
+<div class="center">
+<p><img src="805TikZDrawinglines.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:806">806TikZDrawinglines - Advanced curves</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\draw[dotted,gray] (-1,0) -- (5,1);
+\draw (-1,0) .. controls (0,-2) and (4,2) .. (5,1);
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-3">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-4">Screenshot</h2>
+<div class="center">
+<p><img src="806TikZDrawinglines.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:810">810TikZNodes - Introduction to nodes</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=4]
+\draw (0,0) node {hello} -- (1,1) node {world};
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-4">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-5">Screenshot</h2>
+<div class="center">
+<p><img src="810TikZNodes.png" style="width:60.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:811">811TikZNodes - Node positioning</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=3]
+\draw (0,0) -- (1,1) node[midway]{A} node[pos=0.75,above]{B} node[right]{C};
+\draw (0,0) -- (1,1) node[left]{D};
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-5">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-6">Screenshot</h2>
+<div class="center">
+<p><img src="811TikZNodes.png" style="width:60.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:812">812TikZNodes - Nodes with ’to’ command</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=3]
+\draw (0,0) to node[midway]{A} node[pos=0.75, above]{B} (1,1) node[right]{C};
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-6">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-7">Screenshot</h2>
+<div class="center">
+<p><img src="812TikZNodes.png" style="width:60.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:813">813TikZNodes.tex - Mathematical forms</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=3]
+\draw (0,0) node[circle, draw]{$\sum_{i=1}^{n}n^2$} -- (1,1)
+node[rectangle,draw]{$\frac{1}{\sqrt{2}}$};
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-7">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-8">Screenshot</h2>
+<div class="center">
+<p><img src="813TikZNodes.png" style="width:60.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:814">814TikZNodes - Named nodes</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=3]
+\node[circle,draw] (label1) at (0,0) {$\sum_{i=1}^{n}n^2$};
+\node[rectangle,draw] (label2) at (1,1) {$\frac{1}{\sqrt{2}}$};
+\draw (label1) -- (label2);
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-8">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-9">Screenshot</h2>
+<div class="center">
+<p><img src="814TikZNodes.png" style="width:60.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:815">815TikZNodesGenerateGraph - Complex graph</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=2]
+\node[circle, draw] at (0,0) (a) {A};
+\node[rectangle, fill] at (3,0) (b) {};
+\node at (3,0.4) (blabel) {B};
+\node[rectangle,rounded corners, draw] at (5,2) (c) {C};
+
+\draw[-&gt;, green] (a) -- (b) node[midway, below,black]{2};
+\draw[&lt;-&gt;, blue] (a) to[out=45, in=135] (b);
+\draw[-&gt;,red] (b)--(c);
+\draw[yellow,dotted,very thick] (b) |- (c);
+\draw[&lt;-,cyan] (b) -| (c);
+\draw[thick,black] (a).. controls (1,5) .. (c) 
+    node[midway,above]{$\frac{1}{2}$};
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-9">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-10">Screenshot</h2>
+<div class="center">
+<p><img src="815TikZNodesGenerateGraph.png" style="width:70.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:820">820Plottingcurves - Simple curve plotting</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\draw [domain=-2:2] plot (\x, {pow(\x,2)});
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-10">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-11">Screenshot</h2>
+<div class="center">
+<p><img src="820Plottingcurves.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:821A">821APlottingcurves - Cosine with axes</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+\draw[gray, -&gt;] (-2,0) -- (2,0) node[right]{$x$} node[pos=0.53, below]{$O$};
+\draw[gray, -&gt;] (0,-1) -- (0,1) node[above]{$y$};
+\draw[fill,gray] (0,0) circle [radius=1pt];
+\draw[blue, thick] [domain=-2:2, samples=50] 
+    plot (\x,{cos(pi*\x r)})
+    node[right]{$y = \cos(x)$};
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-11">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-12">Screenshot</h2>
+<div class="center">
+<p><img src="821APlottingcurves.png" style="width:70.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:821B">821BPlottingcurves - Parabola with axes</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\draw[gray, -&gt;] (-3,0) -- (3,0) node[right]{$x$} node[pos=0.53, below]{$O$};
+\draw[gray, -&gt;] (0,-2) -- (0,2) node[above]{$y$};
+\draw[fill,gray] (0,0) circle [radius=1pt];
+\draw [domain=-2:2] plot (\x, {pow(\x,2)}) node[right] {$y = x^2$};
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-12">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-13">Screenshot</h2>
+<div class="center">
+<p><img src="821BPlottingcurves.png" style="width:70.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:830">830TikZWorkingWithLoops - Simple loops</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=0.75]
+\foreach \x in {0,1,2,3}
+\draw[red,thick] (0,\x) circle [radius=\x+1];
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-13">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-14">Screenshot</h2>
+<div class="center">
+<p><img src="830TikZWorkingWithLoops.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:831">831TikZWorkingWithLoopsSierpiński - Sierpiński
+triangle</h1>
+<pre><code>\documentclass[border=1cm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{math}
+
+\newcommand\Triangle[2]{
+  \draw #1 coordinate(a)-- ++(0:#2) coordinate(b);
+  \draw (a)-- ++(60:#2) coordinate(c);
+  \fill (a)-- (b)-- (c)-- cycle;
+}
+
+\begin{document}
+\begin{tikzpicture}
+  \tikzmath{
+    function sierpinski(\x, \y, \s, \d) {
+      if (\d == 0) then {
+        { \Triangle{(\x,\y)}{\s}; };
+      } else {
+        \u1 = 0.25*\s;
+        \u2 = \u1*sqrt(3);
+        \u3 = 0.5*\s;
+        sierpinski(\x,\y,\u3,\d-1);
+        sierpinski(\x+\u3,\y,\u3,\d-1);
+        sierpinski(\x+\u1,\y+\u2,\u3,\d-1);
+      };
+    };
+ \S = 4; 
+    for \d in {0,...,5}{
+      % To situate all plots nicely under and next to each other, define the coords
+      % of the lower left corners preemptively
+      \x = (\S+1)*mod(\d,2);
+      \y = int(\d/2) * (\S+1);
+      sierpinski(\x,-\y,\S,\d);
+      };
+  }
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-14">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-15">Screenshot</h2>
+<div class="center">
+<p><img src="831TikZWorkingWithLoopsSierpiński.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:840">840EXERCICE1 - Exercise: Pentagon</h1>
+<pre><code>\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\foreach \a/\i in {0/1,72/2,144/3,216/4,288/5}
+    \node[circle,draw] (v\i) at (\a:2) {$v_{\i}$};
+\draw (v1)--(v2)--(v3)--(v4)--(v5)--cycle;
+\draw[red] (v1)--(v3)--(v5)--(v2)--(v4)--cycle;
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-15">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-16">Screenshot</h2>
+<div class="center">
+<p><img src="840Exercice1.png" style="width:60.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:841">841EXERCICE - Exponential and logarithmic
+functions</h1>
+<pre><code>\documentclass[border=1cm]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[&gt;=stealth, scale=1.2]
+    \draw[very thin, gray!30] (-2,-2) grid (4,4);
+    \draw[-&gt;, thick] (-2.5,0) -- (4.5,0) node[right] {$x$};
+    \draw[-&gt;, thick] (0,-2.5) -- (0,4.5) node[above] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw[blue, thick, domain=-2.2:1.4, samples=50] 
+        plot (\x, {exp(\x)}) node[right] {$y=e^x$};
+    \draw[red, thick, domain=0.12:4.2, samples=50] 
+        plot (\x, {ln(\x)}) node[above right] {$y=\ln(x)$};
+    \filldraw[blue] (0,1) circle (2pt);
+    \node[left, blue] at (0,1) {$A(0,1)$};
+    \filldraw[red] (1,0) circle (2pt);
+    \node[below right, red] at (1,0) {$B(1,0)$};
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-16">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-17">Screenshot</h2>
+<div class="center">
+<p><img src="841Exercice.png" style="width:70.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:842">842EXERCICE3 - Fractal tree</h1>
+<pre><code>\documentclass[border=1cm]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{math}
+\begin{document}
+\begin{tikzpicture}[x=1cm, y=1cm]
+  \tikzmath{
+    function drawtree(\x, \y, \angle, \size, \depth) {
+      if (\depth &gt; 0) then {
+        \nextx = \x + \size * cos(\angle);
+        \nexty = \y + \size * sin(\angle);
+        {
+          \draw[line width=\size*2, color=green!\depth!brown] 
+            (\x, \y) -- (\nextx, \nexty);
+        };
+        \newsize = \size * 0.75;
+        \newdepth = \depth - 1;
+        drawtree(\nextx, \nexty, \angle + 25, \newsize, \newdepth);
+        drawtree(\nextx, \nexty, \angle - 35, \newsize, \newdepth);
+      };
+    };
+    drawtree(0, 0, 90, 1.5, 9);
+  }
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-17">Generated figure</h2>
+<div class="center">
+
+</div>
+<h2 class="unnumbered" id="screenshot-18">Screenshot</h2>
+<div class="center">
+<p><img src="842Exercice3.png" style="width:70.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 class="unnumbered"
+id="conclusion-methodology-for-creating-successful-tikz-documents">Conclusion:
+Methodology for creating successful TikZ documents</h1>
+<p>After exhaustive study of TikZ examples, here is the structured
+methodology for creating successful TikZ documents:</p>
+<h2 class="unnumbered" id="essential-basic-structure">1. Essential basic
+structure</h2>
+<pre><code>\documentclass{article}  % or standalone for figures only
+\usepackage{tikz}        % REQUIRED first
+\usepackage{amsmath}     % For mathematical formulas
+% Other packages as needed
+\begin{document}
+\begin{tikzpicture}[options]
+  % Your TikZ code here
+\end{tikzpicture}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="recommended-progressive-approach">2.
+Recommended progressive approach</h2>
+<p><strong>Step 1: Planning</strong></p>
+<ul>
+<li><p>Define dimensions (min/max coordinates)</p></li>
+<li><p>Identify graphical elements (lines, shapes, text)</p></li>
+<li><p>Choose appropriate scale</p></li>
+</ul>
+<p><strong>Step 2: Build in layers</strong></p>
+<ol>
+<li><p>Reference grid
+(<code>draw[gray, thin] (0,-8) grid (5,5);</code>)</p></li>
+<li><p>Axes and reference marks</p></li>
+<li><p>Main elements</p></li>
+<li><p>Details and annotations</p></li>
+<li><p>Legends and text</p></li>
+</ol>
+<p><strong>Step 3: Optimize</strong></p>
+<ul>
+<li><p>Use custom styles:
+<code>\tikzset{monstyle/.style={red, thick}}</code></p></li>
+<li><p>Define reusable nodes</p></li>
+<li><p>Organize with relative coordinates</p></li>
+</ul>
+<h2 class="unnumbered" id="essential-best-practices">3. Essential best
+practices</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Practice</strong></th>
+<th style="text-align: left;"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Comment code</td>
+<td style="text-align: left;"><code>% X-axis</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Name nodes</td>
+<td style="text-align: left;"><code>(A) at (0,0)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Use loops</td>
+<td style="text-align: left;"><code>\foreach</code> for repetitions</td>
+</tr>
+<tr>
+<td style="text-align: left;">Separate style/content</td>
+<td style="text-align: left;">Styles in preamble, drawing in
+tikzpicture</td>
+</tr>
+<tr>
+<td style="text-align: left;">Test frequently</td>
+<td style="text-align: left;">Compile often to detect errors</td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="synthetic-conclusion">4. Synthetic
+conclusion</h2>
+<div class="framed">
+<p><strong>To create successful TikZ documents:</strong></p>
+<p>1. <strong>Structure</strong>: Preamble → Environment → Commands →
+Closure</p>
+<p>2. <strong>Iterate</strong>: Simple → Complex, Grid → Axes → Shapes →
+Details</p>
+<p>3. <strong>Optimize</strong>: Styles, Loops, Named nodes</p>
+<p>4. <strong>Verify</strong>: Semicolons, Names, Scale</p>
+<p>5. <strong>Document</strong>: Comments, Separate files, Notes</p>
+</div>
+<p><strong>Final reminder</strong>: TikZ is a powerful tool requiring
+practice. Always start with simple examples, gradually increase
+complexity, and don’t hesitate to break down complex figures into
+several independent <code>tikzpicture</code> environments.</p>
+</body>
+</html>
