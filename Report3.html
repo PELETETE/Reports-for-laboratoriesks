@@ -1,0 +1,506 @@
+<h1 id="sec:mathmode">MathMode.tex - Basic Math Mode Introduction</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+A sentence with inline mathematics: $y = mx + c$.
+
+A second sentence with inline mathematics: $5^{2}=3^{2}+4^{2}$.
+%A second paragraph containing display math.
+\[
+ y = mx + c
+\]
+%See how the paragraph continues after the display.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure">Generated figure</h2>
+<p>Basic inline and display math mode examples.</p>
+<h2 class="unnumbered" id="screenshot">Screenshot</h2>
+<div class="center">
+<p><img src="MathMode.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:superscripts">MathModeSuperscripts.tex - Superscripts and
+Subscripts</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+Superscripts $a^{b}$ and subscripts $a_{b}$.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-1">Generated figure</h2>
+<p>Demonstration of superscript and subscript notation.</p>
+<h2 class="unnumbered" id="screenshot-1">Screenshot</h2>
+<div class="center">
+<p><img src="MathModeSuperscripts.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:commands">MathModeCommands.tex - Math Commands</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+Some mathematics: $y = 2 \sin \theta^{2}$.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-2">Generated figure</h2>
+<p>Using mathematical functions like <code>\sin</code> and Greek
+letters.</p>
+<h2 class="unnumbered" id="screenshot-2">Screenshot</h2>
+<div class="center">
+<p><img src="MathModeCommands.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:display">DisplayMathematics.tex - Display Mathematics</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+A paragraph about a larger equation
+\[
+\int_{-\infty}^{+\infty} e^{-x^2} \, dx
+\]
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-3">Generated figure</h2>
+<p>Display math with integral and Gaussian function.</p>
+<h2 class="unnumbered" id="screenshot-3">Screenshot</h2>
+<div class="center">
+<p><img src="DisplayMathematics.png" style="width:70.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:equation">DisplayMathematicsEquation.tex - Numbered
+Equations</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+A paragraph about a larger equation
+\begin{equation}
+\int_{-\infty}^{+\infty} e^{-x^2} \, dx
+\end{equation}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-4">Generated figure</h2>
+<p>Numbered equation using <code>equation</code> environment.</p>
+<h2 class="unnumbered" id="screenshot-4">Screenshot</h2>
+<div class="center">
+<p><img src="DisplayMathematicsEquation.png" style="width:70.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:diff">DisplayMathematicsDiff.tex - Custom Differential</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\newcommand{\diff}{\mathop{}\!d} % For italic
+% \newcommand{\diff}{\mathop{}\!\mathrm{d}} % For upright
+\begin{document}
+A paragraph about a larger equation
+\[
+\int_{-\infty}^{+\infty} e^{-x^2} \diff x
+\]
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-5">Generated figure</h2>
+<p>Custom differential command for better spacing.</p>
+<h2 class="unnumbered" id="screenshot-5">Screenshot</h2>
+<div class="center">
+<p><img src="DisplayMathematicsDiff.png" style="width:70.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:amsmath">TheAmsmathPackage.tex - AMS Math Package
+Introduction</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\begin{document}
+Solve the following recurrence for $ n,k\geq 0 $:
+\begin{align*}
+  Q_{n,0} &amp;= 1 \quad Q_{0,k} = [k=0]; \\
+  Q_{n,k} &amp;= Q_{n-1,k}+Q_{n-1,k-1}+\binom{n}{k},\quad\text{for $n$, $k&gt;0$.}
+\end{align*}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-6">Generated figure</h2>
+<p>AMS align environment for multi-line equations.</p>
+<h2 class="unnumbered" id="screenshot-6">Screenshot</h2>
+<div class="center">
+<p><img src="TheAmsmathPackage.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:matrices">TheAmsmathPackageMatrices.tex - AMS Matrices</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\begin{document}
+AMS matrices.
+\[
+\begin{matrix}
+a &amp; b &amp; c \\
+d &amp; e &amp; f
+\end{matrix}
+\quad
+\begin{pmatrix}
+a &amp; b &amp; c \\
+d &amp; e &amp; f
+\end{pmatrix}
+\quad
+\begin{bmatrix}
+a &amp; b &amp; c \\
+d &amp; e &amp; f
+\end{bmatrix}
+\]
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-7">Generated figure</h2>
+<p>Different matrix environments from amsmath.</p>
+<h2 class="unnumbered" id="screenshot-7">Screenshot</h2>
+<div class="center">
+<p><img src="TheAmsmathPackageMatrices.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:columns">ColumnsinMathAlignments.tex - Column
+Alignments</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\begin{document}
+Aligned equations
+\begin{align*}
+a &amp;= b+1 &amp; c &amp;= d+2 &amp; e &amp;= f+3 \\
+r &amp;= s^{2} &amp; t &amp;=u^{3} &amp; v &amp;= w^{4}
+\end{align*}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-8">Generated figure</h2>
+<p>Multiple columns in align environment.</p>
+<h2 class="unnumbered" id="screenshot-8">Screenshot</h2>
+<div class="center">
+<p><img src="ColumnsinMathAlignments.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:aligned">DisplayingEnvironmentAmsmathAlignments.tex -
+Aligned Subenvironment</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\begin{document}
+\begin{itemize}
+\item
+$\begin{aligned}[t]
+a&amp;=b\\
+c&amp;=d
+\end{aligned}$
+\item
+$\begin{aligned}
+a&amp;=b\\
+c&amp;=d
+\end{aligned}$
+\end{itemize}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-9">Generated figure</h2>
+<p>Aligned subenvironment with vertical positioning.</p>
+<h2 class="unnumbered" id="screenshot-9">Screenshot</h2>
+<div class="center">
+<p><img src="DisplayingEnvironmentAmsmathAlignments.png"
+style="width:60.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:further">FurtherAmsmathAlignments.tex - Gather and
+Multline</h1>
+<pre><code>\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\begin{document}
+Gather
+\begin{gather}
+  P(x)=ax^{5}+bx^{4}+cx^{3}+dx^{2}+ex +f\\
+  x^2+x=10
+\end{gather}
+Multline
+\begin{multline*}
+   (a+b+c+d)x^{5}+(b+c+d+e)x^{4} \\
+    +(c+d+e+f)x^{3}+(d+e+f+a)x^{2}+(e+f+a+b)x\\
+    + (f+a+b+c)
+\end{multline*}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-10">Generated figure</h2>
+<p>Gather and multline environments for multi-line equations.</p>
+<h2 class="unnumbered" id="screenshot-10">Screenshot</h2>
+<div class="center">
+<p><img src="FurtherAmsmathAlignments.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:boldmath">BoldMath.tex - Bold Mathematics</h1>
+<pre><code>\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+$(x+y)(x-y)=x^{2}-y^{2}$
+
+{\boldmath $(x+y)(x-y)=x^{2}-y^{2}$ $\pi r^2$}
+$(x+\mathbf{y})(x-\mathbf{y})=x^{2}-{\mathbf{y}}^{2}$
+$\mathbf{\pi} r^2$ % bad use of \mathbf
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-11">Generated figure</h2>
+<p>Bold math using <code>\boldsymbol</code> and
+<code>\mathbf</code>.</p>
+<h2 class="unnumbered" id="screenshot-11">Screenshot</h2>
+<div class="center">
+<p><img src="BoldMath.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:boldface">FontsinMathModeBoldface.tex - Boldface in
+Math</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+The matrix $\mathbf{M}$.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-12">Generated figure</h2>
+<p>Bold math symbols.</p>
+<h2 class="unnumbered" id="screenshot-12">Screenshot</h2>
+<div class="center">
+<p><img src="FontsinMathModeBoldface.png" style="width:50.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:fonts">FontsinMathModeSpecifics.tex - Math Font
+Specifics</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\begin{document}
+$\text{bad use } size \neq \mathit{size} \neq \mathrm{size} $
+\textit{$\text{bad use } size \neq \mathit{size} \neq \mathrm{size} $}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-13">Generated figure</h2>
+<p>Different math font styles.</p>
+<h2 class="unnumbered" id="screenshot-13">Screenshot</h2>
+<div class="center">
+<p><img src="FontsinMathModeSpecifics.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:mathtools">Mathtools.tex - Mathtools Package</h1>
+<pre><code>\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\begin{document}
+\[
+\begin{pmatrix*}[r]
+10&amp;11\\
+1&amp;2\\
+5&amp;-4
+-5&amp;-6
+\end{pmatrix*}
+\]
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-14">Generated figure</h2>
+<p>Mathtools package with starred matrix for alignment.</p>
+<h2 class="unnumbered" id="screenshot-14">Screenshot</h2>
+<div class="center">
+<p><img src="Mathtools.png" style="width:60.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:bm">BoldMathCommendBM.tex - pmatrix* Environment</h1>
+<pre><code>\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\begin{document}
+\[
+\begin{pmatrix*}[r]
+10&amp;11\\
+1&amp;2\\
+-5&amp;-6
+\end{pmatrix*}
+\]
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-15">Generated figure</h2>
+<p>Matrix with right-aligned negative numbers.</p>
+<h2 class="unnumbered" id="screenshot-15">Screenshot</h2>
+<div class="center">
+<p><img src="BoldMathCommendBM.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:lualatex">LualatexMathMode.tex - Unicode Math with
+LuaLaTeX</h1>
+<pre><code>\documentclass[a4paper]{article}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\begin{document}
+One two three
+\[
+\log \alpha + \log \beta = \log(\alpha\beta)
+\]
+
+Unicode Math Alphanumerics
+\[A + \symfrak{A}+\symbf{A}+ \symcal{A} + \symscr{A}+\symbb{A}\]
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-16">Generated figure</h2>
+<p>LuaLaTeX with unicode-math for modern font handling.</p>
+<h2 class="unnumbered" id="screenshot-16">Screenshot</h2>
+<div class="center">
+<p><img src="LualatexMathMode.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:lab03">Lab03MathMode.tex - Comprehensive Lab Examples</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+%%  3-1) Math Mode
+ A sentence with inline mathematics: $y = mx + c$.
+ A second sentence with inline mathematics: $5^{2}=3^{2}+4^{2}$.
+
+
+ A second paragraph containing display math.
+ \[
+  y = mx + c
+ \]
+ See how the paragraph continues after the display.
+ \end{document}
+
+\textasciitilde
+ %% 3-2) Examples where simple super- and subscripts are entered without braces
+ \usepackage[T1]{fontenc}
+ \begin{document}
+ Superscripts $a^{b}$ and subscripts $a_{b}$.
+ \end{document}
+
+
+\textasciitilde
+documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\begin{document}
+\[
+\begin{pmatrix*}[r]
+10&amp;11\\
+1&amp;2\\
+-5&amp;-6
+\end{pmatrix*}
+\]
+\end{document}
+
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-17">Generated figure</h2>
+<p>Multiple examples combined from laboratory exercises.</p>
+<h2 class="unnumbered" id="screenshot-17">Screenshot</h2>
+<div class="center">
+<p><img src="Lab03MathMode.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 class="unnumbered"
+id="conclusion-methodology-for-mathematical-typesetting">Conclusion:
+Methodology for Mathematical Typesetting</h1>
+<p>After comprehensive analysis of mathematical mode examples, here is
+the structured methodology for effective mathematical typesetting in
+LaTeX:</p>
+<h2 class="unnumbered" id="essential-math-mode-structures">1. Essential
+math mode structures</h2>
+<pre><code>% Inline math: $...$ or \(...\)
+$E = mc^2$
+
+% Display math unnumbered: \[...\]
+\[
+\int_a^b f(x)\,dx
+\]
+
+% Display math numbered: \begin{equation}...\end{equation}
+\begin{equation}
+\sum_{i=1}^n i = \frac{n(n+1)}{2}
+\end{equation}
+
+% Multi-line equations: \begin{align}...\end{align}
+\begin{align}
+x &amp;= y + z \\
+u &amp;= v + w
+\end{align}</code></pre>
+<h2 class="unnumbered" id="math-mode-environments-comparison">2. Math
+mode environments comparison</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Environment</strong></th>
+<th style="text-align: left;"><strong>Package</strong></th>
+<th style="text-align: left;"><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>equation</code></td>
+<td style="text-align: left;">amsmath</td>
+<td style="text-align: left;">Numbered single equation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>align</code></td>
+<td style="text-align: left;">amsmath</td>
+<td style="text-align: left;">Multi-line alignment with multiple
+columns</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gather</code></td>
+<td style="text-align: left;">amsmath</td>
+<td style="text-align: left;">Multi-line equations without
+alignment</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>multline</code></td>
+<td style="text-align: left;">amsmath</td>
+<td style="text-align: left;">Single equation split over multiple
+lines</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>matrix</code></td>
+<td style="text-align: left;">amsmath</td>
+<td style="text-align: left;">Unbracketed matrix</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pmatrix</code></td>
+<td style="text-align: left;">amsmath</td>
+<td style="text-align: left;">Matrix with parentheses</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>bmatrix</code></td>
+<td style="text-align: left;">amsmath</td>
+<td style="text-align: left;">Matrix with square brackets</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pmatrix*</code></td>
+<td style="text-align: left;">mathtools</td>
+<td style="text-align: left;">Matrix with column alignment options</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>aligned</code></td>
+<td style="text-align: left;">amsmath</td>
+<td style="text-align: left;">Subenvironment for blocks within other
+math</td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="essential-practices">5. Essential
+practices</h2>
+<div class="framed">
+<p><strong>Best practices for mathematical typesetting:</strong></p>
+<p>1. <strong>Always use math mode for mathematics</strong>: Never use
+regular text for mathematical symbols</p>
+<p>2. <strong>Load amsmath</strong>: It’s essential for professional
+math typesetting</p>
+<p>3. <strong>Use appropriate brackets</strong>: For matrices, choose
+the right bracket style</p>
+<p>4. <strong>Be careful with bold</strong>: Use <code>\mathbf</code>
+for variables, <code>\boldsymbol</code> for symbols</p>
+<p>5. <strong>Differentiate d and e</strong>: Consider upright d for
+differential, italic e for Euler’s number</p>
+<p>6. <strong>Align at equals signs</strong>: Use <code>&amp;</code> in
+align environments</p>
+<p>7. <strong>Label important equations</strong>: Use
+<code>\label</code> and <code>\ref</code> for cross-referencing</p>
+<p><strong>Final</strong> : Mastering mathematical typesetting is
+essential for scientific writing. Start with simple inline math,
+progress to displayed equations, then advance to multi-line alignments
+and matrices. Always use the appropriate packages (amsmath, mathtools)
+and choose the compilation engine that best suits your needs.
+Well-formatted mathematics enhances readability and professionalism of
+academic documents.</p>
+</div>

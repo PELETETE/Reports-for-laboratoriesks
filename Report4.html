@@ -1,0 +1,438 @@
+<h1 id="sec:l4-1a">l4-1a.tex - Basic Image Inclusion</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\begin{document}
+This picture.
+\begin{center}
+    \includegraphics[height=6cm]{faucon.jpg}
+\end{center}
+is an imported PDF
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure">Generated figure</h2>
+<p>Basic image inclusion with fixed height.</p>
+<h2 class="unnumbered" id="screenshot">Screenshot</h2>
+<div class="center">
+<p><img src="l4-1a.png" style="width:80.0%" alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p>Loading the <code>graphicx</code> package for image
+support</p></li>
+<li><p>Using <code>\includegraphics[height=6cm]{faucon.jpg}</code> to
+set fixed height</p></li>
+<li><p>Centering the image with <code>center</code> environment</p></li>
+</ul>
+<hr />
+<h1 id="sec:l4-1b">l4-1b.tex - Relative Dimensions</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\begin{document}
+\begin{center}
+    \includegraphics[height = 5cm\textheight]{faucon.jpg}
+\end{center}
+Here you can see faucon in the first image and corbeau in the second
+\begin{center}
+    \includegraphics[width = 6cm\textwidth]{corbeau.jpg}
+\end{center}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-1">Generated figure</h2>
+<p>Images sized relative to text height and text width.</p>
+<h2 class="unnumbered" id="screenshot-1">Screenshot</h2>
+<div class="center">
+<p><img src="l4-1b.png" style="width:80.0%" alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis-1">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p>Relative sizing: <code>height = 5cm\textheight</code></p></li>
+<li><p>Relative sizing: <code>width = 6cm\textwidth</code></p></li>
+<li><p>Two images (faucon and corbeau) in the same document</p></li>
+</ul>
+<hr />
+<h1 id="sec:l4-1c">l4-1c.tex - Clipping and Trimming</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\begin{document}
+\begin{center}
+    \includegraphics[clip, trim = 0 0 60 70]{faucon.png}
+\end{center}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-2">Generated figure</h2>
+<p>Image with clipping and trimming.</p>
+<h2 class="unnumbered" id="screenshot-2">Screenshot</h2>
+<div class="center">
+<p><img src="l4-1c.png" style="width:80.0%" alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis-2">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p><code>clip</code> option to enable trimming</p></li>
+<li><p><code>trim = left bottom right top</code> to crop image
+edges</p></li>
+<li><p>Removing 60pt from right and 70pt from bottom</p></li>
+</ul>
+<hr />
+<h1 id="sec:l4-2a">l4-2a.tex - Figure Environment with Captions</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\begin{document}
+Test location.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{faucon.jpg}
+  \caption{faucon en haut}
+  \includegraphics[height=5cm]{corbeau.jpg}
+  \caption{corbeau en bas}
+\end{figure}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-3">Generated figure</h2>
+<p>Float environment with multiple images and captions.</p>
+<h2 class="unnumbered" id="screenshot-3">Screenshot</h2>
+<div class="center">
+<p><img src="l4-2a.png" style="width:80.0%" alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis-3">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p><code>figure</code> float environment with placement specifier
+<code>[ht]</code></p></li>
+<li><p><code>\centering</code> for horizontal alignment</p></li>
+<li><p><code>\caption</code> for figure descriptions</p></li>
+<li><p>Multiple images in a single float</p></li>
+</ul>
+<hr />
+<h1 id="sec:l4-2b">l4-2b.tex - Float Placement Options</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\begin{document}
+Some text before the figure.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{corbeau.jpg}
+\caption{corbeau}
+\end{figure}
+
+More text after the figure.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-4">Generated figure</h2>
+<p>Float placement with [h] option.</p>
+<h2 class="unnumbered" id="screenshot-4">Screenshot</h2>
+<div class="center">
+<p><img src="l4-2b.png" style="width:80.0%" alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis-4">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p><code>[h]</code> placement specifier for "here"</p></li>
+<li><p>Width specified as 0.5\textwidth</p></li>
+<li><p>Basic figure float structure</p></li>
+</ul>
+<hr />
+<h1 id="sec:labelref">Thelabelandrefmechanism.tex - Labels and
+References</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\begin{document}
+\section{Introduction}
+Some exciting text with a reference~\ref{sec:next}.
+\section{Next thing}
+\label{sec:next}
+More text here.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-5">Generated figure</h2>
+<p>Cross-referencing mechanism.</p>
+<h2 class="unnumbered" id="screenshot-5">Screenshot</h2>
+<div class="center">
+<p><img src="Thelabelandrefmechanism.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis-5">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p><code>\label{sec:next}</code> to mark a section</p></li>
+<li><p><code>\ref{sec:next}</code> to reference it</p></li>
+<li><p>Automatic numbering and cross-referencing</p></li>
+<li><p>Requires two compilation passes</p></li>
+</ul>
+<hr />
+<h1 id="sec:hyperref">Makingcross-referencesintolinks.tex - References
+with Figures</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\begin{document}
+\section{Introduction}
+Some exciting text with a reference to Section~\ref{sec:next}.
+
+\section{corbeau et faucon}
+\label{sec:next}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{faucon.jpg}
+  \caption{faucon en haut}
+  \includegraphics[height=5cm]{corbeau.jpg}
+  \caption{corbeau en bas}
+\end{figure}
+More text here.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-6">Generated figure</h2>
+<p>Combined cross-references and figures.</p>
+<h2 class="unnumbered" id="screenshot-6">Screenshot</h2>
+<div class="center">
+<p><img src="Makingcross-referencesintolinks.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis-6">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p>Integration of cross-references with figures</p></li>
+<li><p>Section label and reference</p></li>
+<li><p>Multiple images with captions in float</p></li>
+<li><p>Complete document structure</p></li>
+</ul>
+<hr />
+<h1 id="sec:naming">Naminggraphicsfiles.tex - File Naming Issues</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\begin{document}
+Test location
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.6\textwidth]{faucon.png}
+  \caption{faucon.png}
+  \includegraphics[width=0.3\textwidth]{pix/faucon.jpg}
+\end{figure}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-7">Generated figure</h2>
+<p>Image file naming and path issues.</p>
+<h2 class="unnumbered" id="screenshot-7">Screenshot</h2>
+<div class="center">
+<p><img src="Naminggraphicsfiles.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis-7">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p>Subdirectory path: <code>pix/faucon.jpg</code></p></li>
+<li><p>Different image formats (.png, .jpg)</p></li>
+<li><p>Multiple images in same figure</p></li>
+</ul>
+<hr />
+<h1 id="sec:graphicspath">Storinggraphicsinasubdirectory.tex - Graphics
+Path</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\graphicspath{{figs/}{pics/}}
+\begin{document}
+Test location
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.6\textwidth]{faucon.png}
+  \caption{faucon.png}
+\end{figure}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-8">Generated figure</h2>
+<p>Setting graphics search path.</p>
+<h2 class="unnumbered" id="screenshot-8">Screenshot</h2>
+<div class="center">
+<p><img src="Storinggraphicsinasubdirectory.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis-8">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p><code>\graphicspath{{figs/}{pics/}}</code> to set search
+directories</p></li>
+<li><p>Organizing images in subdirectories</p></li>
+<li><p>Path specification syntax</p></li>
+</ul>
+<hr />
+<h1 id="sec:placing">Placingfloats.tex - Basic Float Placement</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\begin{document}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{faucon.png}
+  \caption{faucon.png}
+\end{figure}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-9">Generated figure</h2>
+<p>Basic float placement options.</p>
+<h2 class="unnumbered" id="screenshot-9">Screenshot</h2>
+<div class="center">
+<p><img src="Placingfloats.png" style="width:80.0%" alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis-9">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p>Standard <code>figure</code> environment</p></li>
+<li><p>Placement specifier <code>[htbp]</code></p></li>
+<li><p><code>\centering</code> for alignment</p></li>
+<li><p>Caption with description</p></li>
+</ul>
+<hr />
+<h1 id="sec:trivfloat2">OtherTypesOfFlotTriv.tex - Custom Float
+Types</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\newfloat{image}{htbp}{loi}
+\usepackage{float}
+\begin{document}
+\begin{image}
+  \centering
+  \includegraphics[width=0.7\textwidth]{faucon.png}
+  \caption{faucon.png}
+\end{image}
+\begin{image}
+ \centering
+ \includegraphics[width=0.7\textwidth]{corbeau.jpg}
+ \caption{corbeau.jpg}
+\end{image}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-10">Generated figure</h2>
+<p>Custom float types.</p>
+<h2 class="unnumbered" id="screenshot-10">Screenshot</h2>
+<div class="center">
+<p><img src="OtherTypesOfFlotTriv.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="analysis-10">Analysis</h2>
+<p>This document demonstrates:</p>
+<ul>
+<li><p>Custom float type <code>image</code></p></li>
+<li><p><code>\centering</code> for alignment</p></li>
+<li><p>Sequential caption numbering</p></li>
+<li><p>Different image formats in same float type</p></li>
+</ul>
+<hr />
+<h1 class="unnumbered"
+id="conclusion-methodology-for-graphics-and-floats">Conclusion:
+Methodology for Graphics and Floats</h1>
+<p>After comprehensive analysis of graphics and float examples, here is
+the structured methodology for effectively including images and managing
+floats in LaTeX:</p>
+<h2 class="unnumbered" id="essential-graphics-inclusion-structure">1.
+Essential graphics inclusion structure</h2>
+<pre><code>\documentclass{article}
+\usepackage{graphicx}        % Required for images
+
+\begin{document}
+% Basic image inclusion
+\includegraphics[width=0.5\textwidth]{image.jpg}
+
+% Figure float with caption
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[height=5cm]{image.png}
+  \caption{Description of image}
+  \label{fig:label}
+\end{figure}
+
+% Cross-reference to figure
+As shown in Figure~\ref{fig:label}...
+\end{document}</code></pre>
+<h2 class="unnumbered" id="key-commands-and-options">2. Key commands and
+options</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Command/Option</strong></th>
+<th style="text-align: left;"><strong>Syntax</strong></th>
+<th style="text-align: left;"><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">\includegraphics</td>
+<td
+style="text-align: left;"><code>\includegraphics[keyvals]{file}</code></td>
+<td style="text-align: left;">Include image with options</td>
+</tr>
+<tr>
+<td style="text-align: left;">Width option</td>
+<td style="text-align: left;"><code>width=0.5\textwidth</code></td>
+<td style="text-align: left;">Scale relative to text width</td>
+</tr>
+<tr>
+<td style="text-align: left;">Height option</td>
+<td style="text-align: left;"><code>height=5cm</code></td>
+<td style="text-align: left;">Set fixed height</td>
+</tr>
+<tr>
+<td style="text-align: left;">Scale option</td>
+<td style="text-align: left;"><code>scale=0.75</code></td>
+<td style="text-align: left;">Scale factor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Trim/Clip</td>
+<td style="text-align: left;"><code>clip, trim= l b r t</code></td>
+<td style="text-align: left;">Crop image edges</td>
+</tr>
+<tr>
+<td style="text-align: left;">Graphics path</td>
+<td style="text-align: left;"><code>\graphicspath{{subdir/}}</code></td>
+<td style="text-align: left;">Set search directories</td>
+</tr>
+<tr>
+<td style="text-align: left;">\caption</td>
+<td style="text-align: left;"><code>\caption{text}</code></td>
+<td style="text-align: left;">Add caption to float</td>
+</tr>
+<tr>
+<td style="text-align: left;">\label</td>
+<td style="text-align: left;"><code>\label{fig:name}</code></td>
+<td style="text-align: left;">Mark for referencing</td>
+</tr>
+<tr>
+<td style="text-align: left;">\ref</td>
+<td style="text-align: left;"><code>\ref{fig:name}</code></td>
+<td style="text-align: left;">Reference by number</td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="float-placement-specifiers">3. Float
+placement specifiers</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Specifier</strong></th>
+<th style="text-align: left;"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">h</td>
+<td style="text-align: left;">Here - approximately at this point in the
+text</td>
+</tr>
+<tr>
+<td style="text-align: left;">t</td>
+<td style="text-align: left;">Top - at the top of a page</td>
+</tr>
+<tr>
+<td style="text-align: left;">b</td>
+<td style="text-align: left;">Bottom - at the bottom of a page</td>
+</tr>
+<tr>
+<td style="text-align: left;">p</td>
+<td style="text-align: left;">Page - on a separate float page</td>
+</tr>
+<tr>
+<td style="text-align: left;">!</td>
+<td style="text-align: left;">Override - ignore certain
+restrictions</td>
+</tr>
+</tbody>
+</table>

@@ -1,0 +1,921 @@
+<h1 id="sec:700">700IntroductionBeamer - Basic Beamer Presentation</h1>
+<pre><code>\documentclass{beamer}
+\usetheme{Copenhagen}
+
+\title{Présentation Beamer}
+\author{PELE TETE}
+\date{01 01 2025}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}
+\item COMMENT UTILISER BEAMER
+\item COMMENT JE PEUX REUSSIR LES LABO DE KOULYABOV
+\item COMMENT DOIS-JE REDIGER LES LABO DE KOULYABOV
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Méthodologie}
+\begin{block}{Étapes de la méthode}
+1. Préparation des labo\\
+2. Analyse et lecture du livre\\
+3. Compillation des codes-exemples et autres codes
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Résultats}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Résultat des labo
+\item Résultat des retenus de la lecture
+\item Résultat des compillations des codes
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{faucon.jpg}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Conclusion}
+\begin{alertblock}{Points clés}
+\begin{itemize}
+\item Conclusion principale
+\item Implications pratiques
+\item Directions futures
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation">Generated figure
+(simulation)</h2>
+<p>Beamer presentation with title page, introduction, methodology,
+results, and conclusion slides.</p>
+<h2 class="unnumbered" id="imported-image">Imported image</h2>
+<div class="center">
+<p><img src="700IntroductionBeamer.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:711">711StructureOfApresentation - Basic Beamer
+Structure</h1>
+<pre><code>\documentclass{beamer}% use of beamer 
+
+\usetheme{Copenhagen}
+\author{Bert}
+\title{A tale of two primes}
+
+\begin{document}
+All is good
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation-1">Generated
+figure (simulation)</h2>
+<p>Minimal Beamer document structure.</p>
+<h2 class="unnumbered" id="screenshot">Screenshot</h2>
+<div class="center">
+<p><img src="711StructureOfApresentation.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:712">712BeamerFrame - Basic Frame Usage</h1>
+<pre><code>\documentclass{beamer}
+\begin{document}
+\usetheme{Copenhagen}
+\author{Bert}
+\title{A tale of two primes}
+
+\begin{frame}% use of  frame (in beginner)
+\titlepage
+\end{frame}% use of  frame (at the end)
+\begin{frame}{Article}% use of  frame (in beginner)
+Some text about the article.
+\end{frame}% use of  frame (at the end)
+\begin{frame}{Mathematica}%use of  frame (in beginner)
+A helpful tool for mathematicians.
+\end{frame}% use of  frame (at the end)
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure">Generated figure</h2>
+<p>Beamer presentation with title page and two content frames.</p>
+<h2 class="unnumbered" id="screenshot-1">Screenshot</h2>
+<div class="center">
+<p><img src="712BeamerFrame.png" style="width:60.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:712b">712BeamerFrame2 - Blocks in Frames</h1>
+<pre><code>\documentclass{beamer}
+\begin{document}
+\usetheme{Copenhagen}
+\author{Bert}
+\title{A tale of two primes}
+
+\begin{frame}{Article}
+\begin{block}{Example}
+This is an example of a block.
+\end{block}
+\begin{block}{Euclid&#39;s theorem}
+This is a theorem.
+\end{block}
+\end{frame}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-1">Generated figure</h2>
+<p>Frame with example and theorem blocks.</p>
+<h2 class="unnumbered" id="screenshot-2">Screenshot</h2>
+<div class="center">
+<p><img src="712BeamerFrame2.png" style="width:60.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:713">713BeamerFramePause - Pausing Between Blocks</h1>
+<pre><code>\documentclass{beamer}
+\begin{document}
+\usetheme{Copenhagen}
+\author{Bert}
+\title{A tale of two primes}
+
+\begin{frame}{Article}
+\begin{block}{Definition}
+This is a definition.
+\end{block}
+\pause% use of pause to get one by one the slide
+\begin{block}{Euclid&#39;s theorem}
+This is a theorem.
+\end{block}
+\end{frame}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-2">Generated figure</h2>
+<p>Frame with pause between blocks.</p>
+<h2 class="unnumbered" id="screenshot-3">Screenshot</h2>
+<div class="center">
+<p><img src="713BeamerFramePause.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:713b">713BeamerFramePauseEnumerate - Pause with
+Enumerate</h1>
+<pre><code>\documentclass{beamer}
+\begin{document}
+\usetheme{Copenhagen}
+\author{Bert}
+\title{A tale of two primes}
+
+\begin{frame}{Title}
+\begin{enumerate} %use of pause and  enumerate in order to enumerate
+\item Element
+\pause%use of the pause for the slide
+\item Element
+\pause%use of the pause for the slide
+\item Element
+\end{enumerate}%use of pause and  enumerate in order to enumerate
+\end{frame}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-3">Generated figure</h2>
+<p>Enumerated list with pauses.</p>
+<h2 class="unnumbered" id="screenshot-4">Screenshot</h2>
+<div class="center">
+<p><img src="713BeamerFramePauseEnumerate.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:720">720Uncover - Basic Uncover Command</h1>
+<pre><code>\documentclass{beamer}
+\begin{document}
+\usetheme{Copenhagen}
+\author{Bert}
+\title{A tale of two primes}
+%We are going to see how by using \uncover, we can determine when each part of the slide will appear
+\begin{frame}
+\frametitle{Sets}
+A \verb|\alert{set}| is a collection of objects.\verb|\uncover&lt;2-&gt;|{ For example:
+
+\[
+Z=\{\text{cow},\text{pig},\text{elephant}\}.}
+\]
+\uncover&lt;3-&gt;{We call the objects in $Z$ the \alert{elements} of $Z$.}\uncover&lt;4-&gt;{ We write
+\[
+\text{cow} \in Z
+\]}
+\uncover&lt;5-&gt;{with \`\`cow is an element of $Z$&#39;&#39;.}\uncover&lt;6-&gt;{ Frequently encountered sets are}
+
+\[
+\begin{split}
+\uncover&lt;7-&gt;{\mathbb{N}} \uncover&lt;8-&gt;{= \{1,2,3,\ldots \}}&amp;\uncover&lt;9-&gt;{ \qquad (\text{\`\`natural numbers&#39;&#39;})\\}
+\uncover&lt;10-&gt;{\mathbb{Z}} \uncover&lt;11-&gt;{= \{\ldots,-2,-1,0,1,2,\ldots \}}&amp;\uncover&lt;12-&gt;{ \qquad (\text{\`\`integer numbers&#39;&#39;})\\}
+\uncover&lt;13-&gt;{\mathbb{Q}} \uncover&lt;14-&gt;{= \{p/q : p,q\in\mathbb{Z} \text{ and } q\neq 0\} }&amp;\uncover&lt;15-&gt;{\qquad (\text{\`\`rational numbers&#39;&#39;})\\}
+\uncover&lt;16-&gt;{\mathbb{R}} \uncover&lt;17-&gt;{= \{\hbox{decimal numbers}\}}&amp;\uncover&lt;18-&gt;{\quad\qquad (\text{\`\`real numbers&#39;&#39;})}
+\end{split}
+\]
+\end{frame}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-4">Generated figure</h2>
+<p>Step-by-step revelation of set definitions.</p>
+<h2 class="unnumbered" id="screenshot-5">Screenshot</h2>
+<div class="center">
+<p><img src="720Uncover.png" style="width:70.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:720a">720UncoverInAlign2 - Uncover in Align Environment</h1>
+<pre><code>\documentclass{beamer}
+\begin{document}
+\usetheme{Copenhagen}
+\author{Bert}
+\title{A tale of N primes}
+%We can also use \uncover in the align environment.
+\begin{frame}
+     The derivative of $f(x) = g(x) \cdot h(x)$, with $g(x) = x^2$ and $h(x) = \sin(x)$ equals
+     \begin{align*}
+         f&#39;(x) \uncover&lt;2-&gt;{&amp;= g&#39;(x) \cdot h(x) +} \uncover&lt;3-&gt;{g(x) \cdot h&#39;(x)} \\
+         &amp;\uncover&lt;4-&gt;{= 2x \cdot \sin(x) +} \uncover&lt;5-&gt;{x^2\cdot \cos(x).}
+     \end{align*}
+\end{frame}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-5">Generated figure</h2>
+<p>Gradual derivation of product rule.</p>
+<h2 class="unnumbered" id="screenshot-6">Screenshot</h2>
+<div class="center">
+<p><img src="720UncoverInAlign2.png" style="width:70.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:720i">720UncoverItemize - Uncover in Itemize</h1>
+<pre><code>\documentclass{beamer}
+\begin{document}
+\usetheme{Copenhagen}
+\author{Bert}
+\title{A tale of N primes}
+% By using \itemize environment we can also indicate the order at which the various items will appear
+\begin{itemize}
+      \item&lt;4-&gt; $[a,b]\uncover&lt;5-&gt;{=\{x\in\mathbb{R} : a\leq x\leq b\}$,}
+      \item&lt;6-&gt; $(a,b)\uncover&lt;7-&gt;{=\{x\in\mathbb{R} : a&lt; x&lt; b\}$,}
+      \item&lt;8-&gt; $(a,\infty)\uncover&lt;9-&gt;{=\{x\in\mathbb{R} : x&gt;a\}$.}
+\end{itemize}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-6">Generated figure</h2>
+<p>Interval definitions revealed stepwise.</p>
+<h2 class="unnumbered" id="screenshot-7">Screenshot</h2>
+<div class="center">
+<p><img src="720UncoverItemize.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:720i2">720UncoverItemize2 - Advanced Uncover with
+Mathematics</h1>
+<pre><code>\documentclass{beamer}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+\usetheme{Copenhagen}
+\author{Bert}
+\title{A tale of N primes}
+
+% We can use \itemize to create or indicate a various quantities  that we need. More and more
+\begin{frame}{Applications - Function Domains}
+\begin{block}{Example 3}
+Find domain of: $f(x) = \sqrt{4 - x^2}$
+\end{block}
+
+\begin{itemize}
+\item&lt;2-&gt; Need: $4 - x^2 \geq 0$
+\item&lt;3-&gt; $x^2 \leq 4$
+\item&lt;4-&gt; $-2 \leq x \leq 2$
+\item&lt;5-&gt; Domain: $[-2, 2]$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Important Theorems}
+\begin{itemize}
+\item&lt;1-&gt; \textbf{Intermediate Value Theorem:}
+If $f$ continuous on $[a,b]$, takes all values between $f(a)$ and $f(b)$
+
+\item&lt;2-&gt; \textbf{Extreme Value Theorem:}
+Continuous on $[a,b]$ $\Rightarrow$ attains max and min
+
+\item&lt;3-&gt; \textbf{Mean Value Theorem:}
+If $f$ differentiable on $(a,b)$, $\exists c \in (a,b)$ with:
+$$f&#39;(c) = \frac{f(b)-f(a)}{b-a}$$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item&lt;1-&gt; Intervals: sets of real numbers
+\item&lt;2-&gt; Notation: $[$ for included, $($ for excluded
+\item&lt;3-&gt; Types: closed, open, half-open, infinite
+\item&lt;4-&gt; Properties: intersection, length, center
+\item&lt;5-&gt; Applications: inequalities, domains, theorems
+\item&lt;6-&gt; Graphical: $\bullet$, $\circ$, $\rightarrow$
+\item&lt;7-&gt; Fundamental in real analysis
+\item&lt;8-&gt; Essential for calculus
+\item&lt;9-&gt; Basis for advanced mathematics
+\end{itemize}
+\end{frame}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-7">Generated figure</h2>
+<p>Three frames with mathematical content and stepwise reveals.</p>
+<h2 class="unnumbered" id="screenshot-8">Screenshot</h2>
+<div class="center">
+<p><img src="720UncoverItemize2.png" style="width:70.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:730">730BeamerThemeMatrix - Theme Selection</h1>
+<pre><code>\documentclass{beamer}% use of beamer \documentclass{beamer}
+\begin{document}
+\usetheme{Sebastien@Pipping.org}%there more possibilities but I choose that
+\usecolortheme{beaver} 
+\author{Institute}
+\year{
+      November 15,2010}
+\title{Beamer Theme Matrix}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-8">Generated figure</h2>
+<p>Minimal theme selection example.</p>
+<h2 class="unnumbered" id="screenshot-9">Screenshot</h2>
+<div class="center">
+<p><img src="730BeamerThemeMatrix.png" style="width:60.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:740">740TryingPresentation - Complete Presentation
+Example</h1>
+<pre><code>\documentclass{beamer}
+
+\usetheme{Camarades}
+\title{Présentation Beamer}
+\author{PELE TETE}
+\date{01 01 2025}
+
+\begin{document}
+\Section{ Delivering messages to dears Camarades}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}
+\item HOW TO USE BEAMER
+\item HOW CAN I SUCCEED THE LABORATORIES OF KOULYABOV
+\item HOW CAN I ITS WRITE THE LABORATORIES OF KOULYABOV
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Méthodology}
+\begin{block}{METHODOLOGY&#39;S STPES}
+1. LABORATORIES&#39;S PREPARATION\\
+2.BOOK&#39;S LECTURE AND ANALYZE\\
+3. CODES COMPILATION AND OTHERS
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Résultats}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item LABORATORIES&#39;S ANSWERS
+\item REZUME OF LECTURE
+\item CODES COMPILATION&#39;S ANSWERS (PDF,TEX,HTML AND MD )
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{faucon.jpg}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Conclusion}
+\begin{alertblock}{importantes parts}
+\begin{itemize}
+\item PRINCIPAL CONCLUSION
+\item SOMESPRATICES AND IMPLICATIONS
+\item LEARNING FOR THE FUTURE(ANTICIPATION)
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-9">Generated figure</h2>
+<p>Complete presentation with custom theme.</p>
+<h2 class="unnumbered" id="screenshot-10">Screenshot</h2>
+<div class="center">
+<p><img src="740TryingPresentation.png" style="width:70.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:743">743PresentationTikZPoster - First TikZPoster
+Attempt</h1>
+<pre><code>\documentclass[24pt, a0paper, portrait]{tikzposter}% begin the TikZ
+\usepackage[multicol]
+
+\usetheme{Transport theory}
+\title{Boltzmann&#39;s antropie}
+\author{TETE PELE}
+\institute{RUDN University}
+
+\begin{document}
+  \maketitle
+   Transport theory
+\begin{columns}% 
+  \column{.33}
+    MONGE Gaspard
+  \Section{ Definition and Developpment}
+%1st column definition of transport 
+  \column{.33}
+   Richi 
+  \Section{ Definition and Developpment}
+% Geometics definition
+  \column{.33}
+    Kantarovich
+  \Section{ Definition and Developpment}
+%Transfortion in Lineare probleme
+\end{columns}
+%Synthese with Cedric V
+\begin{columns}
+Conclusion
+\end{columns}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-10">Generated figure</h2>
+<p>Basic poster structure with errors.</p>
+<h2 class="unnumbered" id="screenshot-11">Screenshot</h2>
+<div class="center">
+<p><img src="743PresentationTikZPoster.png" style="width:70.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:771">771Presentationa0poster - a0poster Package</h1>
+<pre><code>\documentclass[a0, portrait]{a0poster}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage[svgnames]{xcolor}
+\columnsep=100pt
+
+\begin{document}
+
+\begin{minipage}{.7\textwidth}
+\VeryHuge \textbf{Look I&#39;m making a poster} \\ [0.75cm]
+\Large Ostap S. Bender \\
+\Large RUDN University
+\end{minipage}
+%
+\begin{minipage}{.3\textwidth}
+\includegraphics[width=\textwidth]{instituteLogo.png}
+\end{minipage}
+
+\vspace{2cm}
+
+\begin{multicols}{2}
+
+\section*{Abstract}
+Here follows some regular text, \color{BlueViolet} from now on the text has changed colour, \color{Black} and then we are back to normal.
+
+\section*{Introduction}
+This is the introduction section of my poster.
+
+\begin{center}
+\includegraphics[width=0.8\columnwidth]{faucon.jpg}
+\captionof{figure}{faucon.jpg}
+\end{center}
+
+\section*{Methods}
+Details about the methodology used in this research.
+
+\begin{center}
+\begin{tikzpicture}
+\draw[-&gt;] (0,0) -- (3,0) node[right] {x};
+\draw[-&gt;] (0,0) -- (0,2) node[above] {y};
+\draw[blue, thick] plot[domain=0:2.5] (\x, {0.5*\x*\x});
+\end{tikzpicture}
+\captionof{figure}{Example TikZ figure}
+\end{center}
+
+\section*{Results}
+Presentation of research results.
+
+\section*{Conclusion}
+Summary and conclusions of the research.
+
+\begin{thebibliography}{9}
+\bibitem{ref1} Author, A. (2023). Title. Journal, Volume(Issue), Pages.
+\end{thebibliography}
+
+\end{multicols}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-11">Generated figure</h2>
+<p>Poster using a0poster class.</p>
+<h2 class="unnumbered" id="screenshot-12">Screenshot</h2>
+<div class="center">
+<p><img src="771Presentationa0poster.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:772">772PresentationBeamerPoster - Beamer as Poster</h1>
+<pre><code>\documentclass[xcolor={svgnames}]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\usetheme{Berlin}
+\usecolortheme{seahorse}
+
+\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
+
+\title{Look I&#39;m making a poster}
+\author{Ostap S. Bender}
+\institute{RUDN University}
+
+\begin{document}
+
+\begin{frame}
+
+\begin{columns}
+\begin{column}{.33\textwidth}
+
+\block{Introduction}
+This is the introduction section. Here follows some regular text, \color{BlueViolet} from now on the text has changed colour, \color{Black} and then we are back to normal.
+
+\begin{center}
+\includegraphics[width=0.9\textwidth]{faucon.jpg}
+\captionof{figure}{faucon.jpg}
+\end{center}
+
+\end{column}
+%
+\begin{column}{.33\textwidth}
+
+\block{Methods}
+Details about the methodology used.
+
+\begin{exampleblock}{Example Block}
+This is an example block with important information.
+\end{exampleblock}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[-&gt;] (0,0) -- (4,0) node[right] {x};
+\draw[-&gt;] (0,0) -- (0,3) node[above] {y};
+\fill[red!20] (1,1) circle (1);
+\node at (1,1) {Data};
+\end{tikzpicture}
+\end{center}
+
+\end{column}
+%
+\begin{column}{.33\textwidth}
+
+\block{Results}
+Presentation of research results.
+
+\alertblock{Alert Block}
+Important findings or warnings.
+
+\block{Conclusion}
+Summary and conclusions of the research.
+
+\end{column}
+\end{columns}
+
+\begin{columns}
+\begin{column}{.7\textwidth}
+
+\block{References}
+\begin{thebibliography}{9}
+\bibitem{ref1} Author, A. (2023). Title. Journal, Volume(Issue), Pages.
+\bibitem{ref2} Researcher, B. (2022). Book Title. Publisher.
+\end{thebibliography}
+
+\end{column}
+%
+\begin{column}{.3\textwidth}
+
+\block{Contact}
+Ostap S. Bender \\
+RUDN University \\
+email@example.com
+
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-12">Generated figure</h2>
+<p>Poster using beamerposter package.</p>
+<h2 class="unnumbered" id="screenshot-13">Screenshot</h2>
+<div class="center">
+<p><img src="772PresentationBeamerPoster.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:773a">773PresentationTikZPoster1 - TikZPoster with
+Errors</h1>
+<pre><code>\documentclass[25pt, a0paper, portrait]{tikzposter} % 25pt est une taille standard pour A0
+\usepackage[utf8]{inputenc}
+
+\usetheme{Board} % Thème standard 
+\title{Boltzmann&#39;s entropy} % Correction orthographe &#39;entropy&#39;
+\author{TETE PELE}
+\institute{RUDN University}
+
+\begin{document}
+  \maketitle
+
+  \begin{columns}
+    \column{.33}
+      \block{MONGE Gaspard}{Definition and Development: 1st column definition of transport}
+
+    \column{.33}
+      \block{Richi}{Definition and Development: Geometrics definition}
+
+    \column{.33}
+      \block{Kantorovich}{Definition and Development: Transformation in Linear problems}
+  \end{columns}
+
+  \block{Conclusion}{Synthèse avec Cédric V.}
+
+\end{document}
+
+
+\documentclass[24pt, a0paper, portrait]{tikzposter}% begin the TikZ
+\usepackage[multicol]
+
+\usetheme{Transport theory}
+\title{Boltzmann&#39;s antropie}
+\author{TETE PELE}
+\institute{RUDN University}
+
+\begin{document}
+  \maketitle
+   Transport theory
+\begin{columns}% 
+  \column{.33}{MONGE Gaspard}{ Definition and Developpment}
+1st column definition of transport 
+  \column{.33}
+   Richi 
+  \Section{ Definition and Developpment}
+Geometics definition
+  \column{.33}
+    Kantarovich
+  \Section{ Definition and Developpment}
+Transfortion in Lineare probleme
+\end{columns}
+%Synthese with Cedric V
+\begin{columns}
+Conclusion
+\end{columns}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-13">Generated figure</h2>
+<p>TikZPoster with corrected and incorrect versions.</p>
+<h2 class="unnumbered" id="screenshot-14">Screenshot</h2>
+<div class="center">
+<p><img src="773PresentationTikZPoster1.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:773b">773PresentationTikZPoster2 - TikZPoster</h1>
+<pre><code>\documentclass[24pt, a0paper, portrait]{tikzposter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{color}
+
+\definecolor{MyPink}{RGB}{194, 19, 182}
+\definecolor{MyBlue}{RGB}{30, 100, 200}
+\definecolor{MyGreen}{RGB}{50, 150, 100}
+
+\usetheme{Default}
+
+\title{Look I&#39;m making a poster}
+\author{Ostap S. Bender}
+\institute{RUDN University}
+
+\begin{document}
+
+\maketitle
+
+\begin{columns}
+\column{.33}
+
+\block{Introduction}{
+This is the introduction section. Here follows some regular text, \color{MyPink} from now on the text has changed colour, \color{black} and then we are back to normal.
+\vspace{3cm}
+}
+\note[targetoffsetx=-11cm, targetoffsety=-6.5cm, width=10cm]{This is an important note about the introduction}
+
+\begin{center}
+\includegraphics[width=0.9\colwidth]{faucon.jpg}
+\captionof{figure}{faucon.jpg}
+\end{center}
+
+\column{.33}
+
+\block{Methods}{
+Details about the methodology used in this research.
+}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+\draw[-&gt;, thick] (0,0) -- (5,0) node[right] {Time};
+\draw[-&gt;, thick] (0,0) -- (0,4) node[above] {Value};
+\draw[MyBlue, very thick] plot[domain=0:4.5, samples=50] (\x, {1.5 + sin(\x*100)});
+\draw[MyGreen, very thick] plot[domain=0:4.5, samples=50] (\x, {2.5 + 0.5*cos(\x*120)});
+\node[MyBlue] at (2,3.5) {Method A};
+\node[MyGreen] at (3,1.5) {Method B};
+\end{tikzpicture}
+\captionof{figure}{Comparison of methods}
+\end{center}
+
+\column{.33}
+
+\block{Results}{
+Presentation of research results and findings.
+}
+
+\block{Conclusion}{
+Summary and conclusions of the research. Key findings and future work.
+}
+
+\end{columns}
+
+\begin{columns}
+\column{.7}
+
+\block{References}{
+\begin{multicols}{2}
+\begin{thebibliography}{9}
+\bibitem{ref1} Author, A. (2023). Title. Journal, Volume(Issue), Pages.
+\bibitem{ref2} Researcher, B. (2022). Book Title. Publisher.
+\bibitem{ref3} Scientist, C. (2021). Conference Proceedings.
+\bibitem{ref4} Scholar, D. (2020). Technical Report.
+\end{thebibliography}
+\end{multicols}
+}
+
+\column{.3}
+
+\block{Contact Information}{
+\textbf{Ostap S. Bender} \\
+RUDN University \\
+Department of Mathematics \\
+\texttt{email@rudn.ru} \\
++7 (906) 000-00-00
+}
+
+\block{Acknowledgements}{
+This research was supported by RUDN University.
+}
+
+\end{columns}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-14">Generated figure</h2>
+<p>Complete TikZPoster with colors, figures, and proper structure.</p>
+<h2 class="unnumbered" id="screenshot-15">Screenshot</h2>
+<div class="center">
+<p><img src="773PresentationTikZPoster2.png" style="width:90.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 class="unnumbered"
+id="conclusion-methodology-for-creating-successful-beamer-and-poster-presentations">Conclusion:
+Methodology for creating successful Beamer and Poster presentations</h1>
+<p>After exhaustive study of Beamer and Poster examples, here is the
+structured methodology for creating successful presentations:</p>
+<h2 class="unnumbered" id="essential-basic-structure-for-beamer">1.
+Essential basic structure for Beamer</h2>
+<pre><code>\documentclass{beamer}
+\usetheme{ThemeName}          % Choose a theme
+\usecolortheme{ColorTheme}    % Optional color theme
+\title{Presentation Title}
+\author{Your Name}
+\date{\today}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}{Frame Title}
+% Content here
+\end{frame}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="essential-basic-structure-for-tikzposter">2.
+Essential basic structure for TikZPoster</h2>
+<pre><code>\documentclass[24pt, a0paper, portrait]{tikzposter}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetheme{Default}
+\title{Poster Title}
+\author{Your Name}
+\institute{Your Institution}
+\begin{document}
+\maketitle
+\begin{columns}
+\column{.33}
+\block{Section Title}{
+Content here
+}
+\end{columns}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="recommended-progressive-approach">3.
+Recommended progressive approach</h2>
+<p><strong>Step 1: Planning</strong></p>
+<ul>
+<li><p>Define presentation structure (title, sections, content)</p></li>
+<li><p>Choose appropriate theme and colors</p></li>
+<li><p>Prepare visual elements (images, diagrams)</p></li>
+</ul>
+<p><strong>Step 2: Build in layers</strong></p>
+<ol>
+<li><p>Basic structure (title page, sections)</p></li>
+<li><p>Content (text, blocks, items)</p></li>
+<li><p>Visual elements (images, TikZ graphics)</p></li>
+<li><p>Animations and overlays (pause, uncover)</p></li>
+<li><p>Final polish (notes, references)</p></li>
+</ol>
+<p><strong>Step 3: Optimize</strong></p>
+<ul>
+<li><p>Use consistent formatting</p></li>
+<li><p>Balance text and visuals</p></li>
+<li><p>Test on different screen sizes (for presentations)</p></li>
+<li><p>Check printability (for posters)</p></li>
+</ul>
+<h2 class="unnumbered" id="essential-best-practices">4. Essential best
+practices</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Practice</strong></th>
+<th style="text-align: left;"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Use appropriate themes</td>
+<td style="text-align: left;"><code>\usetheme{Copenhagen}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Organize with blocks</td>
+<td
+style="text-align: left;"><code>\begin{block}{Title}...\end{block}</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Add visual elements</td>
+<td style="text-align: left;">Images, TikZ diagrams</td>
+</tr>
+<tr>
+<td style="text-align: left;">Use overlays effectively</td>
+<td style="text-align: left;"><code>\pause</code>,
+<code>\uncover</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Maintain consistency</td>
+<td style="text-align: left;">Same fonts, colors, sizes</td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="synthetic-conclusion">5. Synthetic
+conclusion</h2>
+<div class="framed">
+<p><strong>To create successful presentations:</strong></p>
+<p>1. <strong>Structure</strong>: Title → Introduction → Content →
+Conclusion → References</p>
+<p>2. <strong>Visuals</strong>: Balance text and graphics, use
+consistent theme</p>
+<p>3. <strong>Animation</strong>: Use <code>pause</code> and
+<code>uncover</code> for stepwise revelation</p>
+<p>4. <strong>Posters</strong>: Use appropriate classes (tikzposter,
+a0poster, beamerposter)</p>
+<p>5. <strong>Testing</strong>: Compile frequently, test on target
+display/print</p>
+</div>
+<p><strong>Final reminder</strong>: Beamer and poster creation tools are
+powerful for academic communication. Start with simple templates,
+gradually add complexity, and always prioritize clarity and readability
+over visual effects.</p>

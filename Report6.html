@@ -1,0 +1,337 @@
+<h1 id="sec:biblatex">TheBibLaTeXWorkFlowWithNatbib - BibLaTeX and
+Natbib Workflow</h1>
+<pre><code>---
+bibliography:
+- learnlatex.bib
+---
+
+The mathematics showcase is from [@Graham1995]. Some more complex citations: [@Graham1995] or @Thomas2008 or possibly . [@Thomas2008 56] [See @Graham1995 45-48] Together [@Thomas2008; @Graham1995]</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation">Generated figure
+(simulation)</h2>
+<p>Markdown document with BibLaTeX citations.</p>
+<h2 class="unnumbered" id="imported-image">Imported image</h2>
+<div class="center">
+<p><img src="TheBibLaTeXWorkFlowWithNatbib.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:learnlatex">learnlatex - Basic Bibliography Document</h1>
+<pre><code>---
+bibliography:
+- Pratical scientific dissertation KOULYABOV C.bib
+title: Mon Document avec Bibliographie
+---
+
+# Introduction
+
+This document demonstrates how to use a bibliography with LaTeX.
+
+# Citations
+
+Here somes citations:
+
+## scientifics Articles
+
+L&#39;article de Thomas et al. [@Thomas2008] studies iron complexes for
+hydrogenase modeling. This research is important for understanding the
+redox properties of catalysts.
+
+## Livre de référence
+
+Le livre *Concrete Mathematics* of Graham, Knuth and Patashnik
+[@Graham1995] is an essential reference in discrete and concrete
+mathematics.
+
+# Conclusion
+
+Les références bibliographiques sont essentielles pour tout travail
+académique.</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation-1">Generated
+figure (simulation)</h2>
+<p>Bilingual document with bibliography references.</p>
+<h2 class="unnumbered" id="screenshot">Screenshot</h2>
+<div class="center">
+<p><img src="learnlatex.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:natbib">exolatexnatbib - NatBib Examples</h1>
+<pre><code>---
+author:
+- Votre Nom
+bibliography:
+- references.bib
+date: 2025-12-25
+title: Exemple avec NatBib
+---
+
+# Test avec NatBib (Pele T. Koulyabov C. Konstantin L. -2025)
+
+## Citations
+
+Voici quelques citations de notre base de données:
+
+- Citation simple: @Thomas2008
+
+- Citation entre parenthèses: [@Graham1995]
+
+- Citation avec pages: [@Thomas2008 pp. 7010-7015]
+
+- Multiple citations: [@Thomas2008; @Smith2020; @Doe2019]
+
+## Citation qui n&#39;existe pas
+
+Essayons une citation qui n&#39;est pas dans la base: @Nonexistent2023
+
+## New enter
+
+référence dans le fichier .bib: [@Doe2019]</code></pre>
+<h2 class="unnumbered" id="generated-figure">Generated figure</h2>
+<p>NatBib citation examples with metadata.</p>
+<h2 class="unnumbered" id="screenshot-1">Screenshot</h2>
+<div class="center">
+<p><img src="exolatexnatbib.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:exobib">exoBibLaTeX - Comprehensive BibLaTeX Exercise</h1>
+<pre><code>---
+author:
+- Votre Nom
+bibliography:
+- references.bib
+date: 2025-12-25
+title: Exercice Biblatex - Test Complet
+---
+
+# Introduction
+
+Test complet de biblatex avec différentes fonctionnalités.
+
+# Citations de base
+
+## Citations simples
+
+- Article: @Thomas2008
+
+- Livre: [@Graham1995]
+
+- Avec pages: [@Thomas2008 7010-7015]
+
+- Multiple: [@Thomas2008; @Smith2020; @Doe2019]
+
+## Commandes de citation avancées
+
+- Auteur seulement: @Smith2020
+
+- Année seulement: [-@Graham1995]
+
+- Auteur et année: @Thomas2008 ([-@Thomas2008])
+
+# Test de citations manquantes
+
+Citation qui n&#39;existe pas dans la base: @ReferenceManquante2025
+
+# Ajout de nouvelles références
+
+- Référence existante: [@Doe2019]
+
+- Nouvelle référence (à ajouter au .bib): @NouveauLivre2024
+
+# Comparaison des styles
+
+Testez en changeant le style dans le préambule:
+
+- `style=authoryear`: (Auteur, Année)
+
+- `style=numeric`: \[1\], \[2\], \[3\]
+
+- `style=alphabetic`: \[Tho08\], \[Gra95\]</code></pre>
+<h2 class="unnumbered" id="generated-figure-1">Generated figure</h2>
+<p>Advanced BibLaTeX testing with style comparisons.</p>
+<h2 class="unnumbered" id="screenshot-2">Screenshot</h2>
+<div class="center">
+<p><img src="exoBibLaTeX.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:biblatexfile">biblatexfile - BibLaTeX with Numerical
+Style</h1>
+<pre><code>---
+bibliography:
+- references.bib
+---
+
+# Test biblatex avec style numérique {#test-biblatex-avec-style-numérique .unnumbered}
+
+Voici quelques citations pour tester biblatex :
+
+- Une citation simple [@Thomas2008]
+
+- Une citation de livre [@Graham1995]
+
+- Une citation de conférence [@Smith2020]
+
+- Une citation multiple [@Thomas2008; @Graham1995; @Smith2020]
+
+# Test d&#39;une citation non existante {#test-dune-citation-non-existante .unnumbered}
+
+Essayons de citer quelque chose qui n&#39;existe pas dans la base : [@Unknown2023]
+
+# Test avec un nouveau style {#test-avec-un-nouveau-style .unnumbered}
+
+Nous pouvons facilement changer le style, par exemple en utilisant `style=alphabetic`.</code></pre>
+<h2 class="unnumbered" id="generated-figure-2">Generated figure</h2>
+<p>BibLaTeX with numerical style and custom sections.</p>
+<h2 class="unnumbered" id="screenshot-3">Screenshot</h2>
+<div class="center">
+<p><img src="biblatexfile.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 class="unnumbered"
+id="conclusion-methodology-for-bibliographic-work">Conclusion:
+Methodology for Bibliographic Work</h1>
+<p>After analysis of bibliography and citation examples, here is the
+structured methodology for academic referencing:</p>
+<h2 class="unnumbered"
+id="essential-document-structure-for-bibliographies">1. Essential
+document structure for bibliographies</h2>
+<pre><code>---
+author:
+- Your Name
+title: Document Title
+date: YYYY-MM-DD
+bibliography:
+- references.bib
+---</code></pre>
+<h2 class="unnumbered" id="basic-citation-patterns">2. Basic citation
+patterns</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Type</strong></th>
+<th style="text-align: left;"><strong>BibLaTeX/Natbib</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Simple</td>
+<td style="text-align: left;"><code>@AuthorYear</code></td>
+<td style="text-align: left;">In-text author citation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parenthetical</td>
+<td style="text-align: left;"><code>[@AuthorYear]</code></td>
+<td style="text-align: left;">Citation in brackets</td>
+</tr>
+<tr>
+<td style="text-align: left;">With pages</td>
+<td style="text-align: left;"><code>[@AuthorYear pp. X-Y]</code></td>
+<td style="text-align: left;">Citation with page range</td>
+</tr>
+<tr>
+<td style="text-align: left;">Multiple</td>
+<td style="text-align: left;"><code>[@Author1; @Author2]</code></td>
+<td style="text-align: left;">Multiple references</td>
+</tr>
+<tr>
+<td style="text-align: left;">Author only</td>
+<td style="text-align: left;"><code>@AuthorYear</code></td>
+<td style="text-align: left;">Cites author in text</td>
+</tr>
+<tr>
+<td style="text-align: left;">Year only</td>
+<td style="text-align: left;"><code>[-@AuthorYear]</code></td>
+<td style="text-align: left;">Cites only year</td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="recommended-workflow">3. Recommended
+workflow</h2>
+<p><strong>Step 1: Prepare bibliography file</strong></p>
+<ul>
+<li><p>Create <code>.bib</code> file with references</p></li>
+<li><p>Use consistent formatting</p></li>
+<li><p>Include all required fields</p></li>
+</ul>
+<p><strong>Step 2: Document setup</strong></p>
+<ol>
+<li><p>Specify bibliography file in YAML header</p></li>
+<li><p>Choose citation style</p></li>
+<li><p>Configure citation commands</p></li>
+</ol>
+<p><strong>Step 3: Cite references</strong></p>
+<ul>
+<li><p>Use appropriate citation format</p></li>
+<li><p>Check reference existence</p></li>
+<li><p>Include page numbers when needed</p></li>
+</ul>
+<p><strong>Step 4: Generate bibliography</strong></p>
+<ul>
+<li><p>Compile document</p></li>
+<li><p>Generate bibliography</p></li>
+<li><p>Verify citations</p></li>
+</ul>
+<h2 class="unnumbered" id="best-practices">4. Best practices</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Practice</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Consistent formatting</td>
+<td style="text-align: left;">Same style throughout document</td>
+</tr>
+<tr>
+<td style="text-align: left;">Complete references</td>
+<td style="text-align: left;">All required fields in .bib entries</td>
+</tr>
+<tr>
+<td style="text-align: left;">Regular updates</td>
+<td style="text-align: left;">Keep bibliography current</td>
+</tr>
+<tr>
+<td style="text-align: left;">Style compliance</td>
+<td style="text-align: left;">Follow journal/format requirements</td>
+</tr>
+<tr>
+<td style="text-align: left;">Error checking</td>
+<td style="text-align: left;">Verify all citations resolve</td>
+</tr>
+<tr>
+<td style="text-align: left;">Backup .bib files</td>
+<td style="text-align: left;">Keep bibliography files safe</td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="common-citation-styles">5. Common citation
+styles</h2>
+<div class="framed">
+<p><strong>Selecting the right style:</strong></p>
+<p>1. <strong>Authoryear</strong>: (Author, Year) - for humanities and
+social sciences</p>
+<p>2. <strong>Numeric</strong>: [1], [2], [3] - for sciences and
+engineering</p>
+<p>3. <strong>Alphabetic</strong>: [Gra95], [Tho08] - for specific
+journal requirements</p>
+<p>4. <strong>Chicago</strong>: Author (Year) - for history and some
+social sciences</p>
+</div>
+<h2 class="unnumbered" id="troubleshooting-guide">6. Troubleshooting
+guide</h2>
+<ul>
+<li><p><strong>Missing citations</strong>: Check .bib file entries and
+compilation order</p></li>
+<li><p><strong>Formatting errors</strong>: Verify style package
+compatibility</p></li>
+<li><p><strong>Duplicate entries</strong>: Use unique keys for each
+reference</p></li>
+<li><p><strong>Unresolved citations</strong>: Ensure citation keys match
+.bib entries</p></li>
+</ul>
+<p><strong>Final recommendation</strong>: Start with a well-organized
+<code>.bib</code> file, use consistent citation practices throughout
+your document, and always verify the final bibliography before
+submission. Bibliographic management is crucial for academic credibility
+and proper attribution of sources.</p>

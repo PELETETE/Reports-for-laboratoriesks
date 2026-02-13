@@ -1,0 +1,462 @@
+<h1 id="sec:general">Installing TeX Live - General Information</h1>
+<pre><code>Installing the distribution TeXlive.
+
+1.1.1 General information
+• TeXLive - the most complete LaTeX distribution supported by the TeX community.
+• Supports a large number of operating systems.
+• Developed since 1996.
+• Based on the teTeX distribution.
+• MacTeX - a variant for MacOS.
+• Main page: https://www.tug.org/texlive/
+• TeXLive is a distribution with continuous updates as part of the annual
+  version of the distribution.</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation">Generated figure
+(simulation)</h2>
+<p>General information about TeX Live distribution.</p>
+<h2 class="unnumbered" id="screenshot">Screenshot</h2>
+<div class="center">
+<p><img src="texlive-full-install-progress.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="key-information-summary">Key Information
+Summary</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Feature</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Distribution Name</td>
+<td style="text-align: left;">TeX Live</td>
+</tr>
+<tr>
+<td style="text-align: left;">Type</td>
+<td style="text-align: left;">Complete LaTeX distribution</td>
+</tr>
+<tr>
+<td style="text-align: left;">First Release</td>
+<td style="text-align: left;">1996</td>
+</tr>
+<tr>
+<td style="text-align: left;">Based on</td>
+<td style="text-align: left;">teTeX distribution</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mac Variant</td>
+<td style="text-align: left;">MacTeX</td>
+</tr>
+<tr>
+<td style="text-align: left;">Official Website</td>
+<td
+style="text-align: left;"><code>https://www.tug.org/texlive/</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Update Model</td>
+<td style="text-align: left;">Continuous updates, annual releases</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="sec:packages">Installation from Distribution Packages</h1>
+<pre><code>1.1.2 Installation from distribution packages
+• Ubuntu:
+  apt install texlive-full
+• Windows. Use the Chocolatey package manager.
+  choco install texlive</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation-1">Generated
+figure (simulation)</h2>
+<p>Package manager installation commands.</p>
+<h2 class="unnumbered"
+id="screenshot---chocolatey-installation">Screenshot - Chocolatey
+Installation</h2>
+<div class="center">
+<p><img src="chocolatey-install-powershell.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="screenshot---chocolatey-success">Screenshot -
+Chocolatey Success</h2>
+<div class="center">
+<p><img src="chocolatey-install-success.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="installation-commands">Installation
+Commands</h2>
+<div class="framed">
+<p><strong>Ubuntu/Debian (Linux):</strong></p>
+<pre><code>sudo apt update
+sudo apt install texlive-full</code></pre>
+<p><strong>Windows (with Chocolatey):</strong></p>
+<pre><code>choco install texlive</code></pre>
+<p><strong>Note:</strong> The <code>texlive-full</code> package installs
+the complete TeX Live distribution including all packages, fonts, and
+documentation. This can take significant disk space (several gigabytes)
+and time to download.</p>
+</div>
+<h2 class="unnumbered"
+id="advantages-of-package-manager-installation">Advantages of Package
+Manager Installation</h2>
+<ul>
+<li><p>Easy installation with single command</p></li>
+<li><p>Automatic dependency resolution</p></li>
+<li><p>Integrated with system package management</p></li>
+<li><p>Easy updates via system package manager</p></li>
+</ul>
+<h2 class="unnumbered" id="disadvantages">Disadvantages</h2>
+<ul>
+<li><p>May not be the latest version</p></li>
+<li><p>Limited to distribution’s repository version</p></li>
+<li><p>Less control over installation components</p></li>
+</ul>
+<hr />
+<h1 id="sec:manual-unix">Manual Installation - Unix/Linux</h1>
+<pre><code>1.1.3 Manual installation
+• Links on the site are to mirrors. The mirror is selected automatically.
+• Download the installer:
+  • Unix: https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+  
+  cd /tmp/
+  wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+
+• For Linux
+  • Unpack the downloaded file:
+    tar xzvf install-tl-unx.tar.gz
+  • Go to the unpacked directory and run the installer:
+    cd install-tl-[0-9]*
+    sudo ./install-tl
+  • It is recommended to create links to executable files in the /usr/local/bin
+    directory. To do this, in the console version of the utility, select the O option,
+    and then L. To return to the previous menu, use R.</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation-2">Generated
+figure (simulation)</h2>
+<p>Manual installation process for Unix/Linux systems.</p>
+<h2 class="unnumbered" id="screenshot-1">Screenshot</h2>
+<div class="center">
+<p><img src="texlive-install-beginning.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="step-by-step-installation-guide">Step-by-Step
+Installation Guide</h2>
+<div class="framed">
+<p><strong>Complete Unix/Linux Installation Procedure:</strong></p>
+<p>1. <strong>Download the installer:</strong></p>
+<pre><code>cd /tmp/
+wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz</code></pre>
+<p>2. <strong>Extract the archive:</strong></p>
+<pre><code>tar xzvf install-tl-unx.tar.gz</code></pre>
+<p>3. <strong>Navigate to the installer directory:</strong></p>
+<pre><code>cd install-tl-*</code></pre>
+<p>4. <strong>Run the installer with root privileges:</strong></p>
+<pre><code>sudo ./install-tl</code></pre>
+<p>5. <strong>Configure installation options (optional):</strong></p>
+<ul>
+<li><p>Select <code>O</code> for options menu</p></li>
+<li><p>Select <code>L</code> to create symbolic links in
+<code>/usr/local/bin</code></p></li>
+<li><p>Press <code>R</code> to return to previous menu</p></li>
+<li><p>Press <code>I</code> to begin installation</p></li>
+</ul>
+</div>
+<h2 class="unnumbered" id="installation-options-explained">Installation
+Options Explained</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Option</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">O</td>
+<td style="text-align: left;">Opens options menu for configuration</td>
+</tr>
+<tr>
+<td style="text-align: left;">L</td>
+<td style="text-align: left;">Creates symbolic links in system
+directories</td>
+</tr>
+<tr>
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">Returns to previous menu</td>
+</tr>
+<tr>
+<td style="text-align: left;">I</td>
+<td style="text-align: left;">Starts the installation process</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="sec:manual-windows">Manual Installation - Windows</h1>
+<pre><code>• Windows: https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe
+• For Windows: run the executable file and install.</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation-3">Generated
+figure (simulation)</h2>
+<p>Windows installer executable.</p>
+<h2 class="unnumbered"
+id="screenshot---installation-progress-1">Screenshot - Installation
+Progress 1</h2>
+<div class="center">
+<p><img src="texlive-install-progress-1.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered"
+id="screenshot---installation-progress-2">Screenshot - Installation
+Progress 2</h2>
+<div class="center">
+<p><img src="texlive-install-progress-2.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered"
+id="screenshot---installation-progress-3">Screenshot - Installation
+Progress 3</h2>
+<div class="center">
+<p><img src="texlive-install-progress-3.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered"
+id="screenshot---installation-completion">Screenshot - Installation
+Completion</h2>
+<div class="center">
+<p><img src="texlive-install-completion.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="windows-installation-guide">Windows
+Installation Guide</h2>
+<div class="framed">
+<p><strong>Windows Installation Steps:</strong></p>
+<p>1. <strong>Download the installer:</strong></p>
+<ul>
+<li><p>Visit:
+<code>https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe</code></p></li>
+<li><p>Or use the direct link:
+<code>https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe</code></p></li>
+</ul>
+<p>2. <strong>Run the installer:</strong></p>
+<ul>
+<li><p>Double-click the downloaded <code>install-tl-windows.exe</code>
+file</p></li>
+<li><p>Allow administrator privileges if prompted</p></li>
+</ul>
+<p>3. <strong>Follow the installation wizard:</strong></p>
+<ul>
+<li><p>Choose installation directory (default:
+<code>C:\texlive\[year]</code>)</p></li>
+<li><p>Select installation scheme (recommended: full
+installation)</p></li>
+<li><p>Choose whether to create shortcuts</p></li>
+<li><p>Click "Install" to begin</p></li>
+</ul>
+<p>4. <strong>Wait for installation to complete:</strong></p>
+<ul>
+<li><p>Installation may take 30-60 minutes depending on internet
+speed</p></li>
+<li><p>Requires several gigabytes of disk space</p></li>
+</ul>
+<p>5. <strong>Verify installation:</strong></p>
+<ul>
+<li><p>Open Command Prompt or PowerShell</p></li>
+<li><p>Type <code>latex --version</code> to verify</p></li>
+</ul>
+</div>
+<h2 class="unnumbered" id="windows-installation-requirements">Windows
+Installation Requirements</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Requirement</strong></th>
+<th style="text-align: left;"><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Operating System</td>
+<td style="text-align: left;">Windows 7 or later</td>
+</tr>
+<tr>
+<td style="text-align: left;">Disk Space</td>
+<td style="text-align: left;">5-7 GB for full installation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Administrator Rights</td>
+<td style="text-align: left;">Required for installation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Internet Connection</td>
+<td style="text-align: left;">Required for downloading packages</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="sec:mactex">MacTeX - MacOS Variant</h1>
+<pre><code>• MacTeX - a variant for MacOS.</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation-4">Generated
+figure (simulation)</h2>
+<p>MacTeX for MacOS.</p>
+<h2 class="unnumbered" id="mactex-information">MacTeX Information</h2>
+<div class="framed">
+<p><strong>MacTeX - TeX Live for MacOS:</strong></p>
+<p>MacTeX is the MacOS-specific distribution of TeX Live. It
+includes:</p>
+<ul>
+<li><p>Complete TeX Live installation</p></li>
+<li><p>Mac-specific tools and utilities</p></li>
+<li><p>TeXShop editor</p></li>
+<li><p>LaTeXiT equation editor</p></li>
+<li><p>BibDesk reference manager</p></li>
+<li><p>Easy installer package (.pkg)</p></li>
+</ul>
+<p><strong>Installation:</strong></p>
+<ol>
+<li><p>Download MacTeX from
+<code>https://tug.org/mactex/</code></p></li>
+<li><p>Open the downloaded .pkg file</p></li>
+<li><p>Follow the installer instructions</p></li>
+<li><p>Installation takes approximately 5-7 GB</p></li>
+</ol>
+<p><strong>Alternative:</strong> BasicTeX (smaller version) for users
+with limited disk space.</p>
+</div>
+<hr />
+<h1 id="sec:vscode">Editor Installation - Visual Studio Code</h1>
+<pre><code>For editing LaTeX documents, Visual Studio Code with LaTeX extensions is recommended.</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation-5">Generated
+figure (simulation)</h2>
+<p>VS Code installation options.</p>
+<h2 class="unnumbered" id="screenshot-2">Screenshot</h2>
+<div class="center">
+<p><img src="vscode-install-options.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="vs-code-installation-guide">VS Code
+Installation Guide</h2>
+<div class="framed">
+<p><strong>Visual Studio Code Installation:</strong></p>
+<p>1. <strong>Download VS Code:</strong></p>
+<ul>
+<li><p>Visit: <code>https://code.visualstudio.com/</code></p></li>
+<li><p>Download the installer for your operating system</p></li>
+</ul>
+<p>2. <strong>Installation options (important):</strong></p>
+<ul>
+<li><p><strong>Add "Open with Code" action</strong> - Recommended for
+easy file access</p></li>
+<li><p><strong>Add to PATH</strong> - Essential for command line
+usage</p></li>
+<li><p><strong>Register Code as editor</strong> - Associates .tex files
+with VS Code</p></li>
+</ul>
+<p>3. <strong>Recommended LaTeX extensions:</strong></p>
+<ul>
+<li><p>LaTeX Workshop</p></li>
+<li><p>LaTeX Utilities</p></li>
+<li><p>LTeX - LanguageTool grammar checker</p></li>
+</ul>
+</div>
+<hr />
+<h1 id="sec:verification">Verification and First Test</h1>
+<pre><code>After installation, verify that TeX Live is properly installed by creating a simple document.</code></pre>
+<h2 class="unnumbered" id="generated-figure-simulation-6">Generated
+figure (simulation)</h2>
+<p>Testing the installation.</p>
+<h2 class="unnumbered" id="screenshot-3">Screenshot</h2>
+<div class="center">
+<p><img src="texlive-test.png" style="width:80.0%" alt="image" /></p>
+</div>
+<h2 class="unnumbered" id="test-document">Test Document</h2>
+<div class="framed">
+<p><strong>Create a test file <code>test.tex</code>:</strong></p>
+<div class="sourceCode" id="cb14" data-language="TeX"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>Texlive ok? HAHAHAHAHAHA!!!!!!!! okokok</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
+<p><strong>Compile the document:</strong></p>
+<pre><code>pdflatex test.tex</code></pre>
+<p><strong>Expected output:</strong></p>
+<ul>
+<li><p><code>test.pdf</code> should be created</p></li>
+<li><p>No error messages</p></li>
+<li><p>PDF viewer should display "Hello, TeX Live!"</p></li>
+</ul>
+</div>
+<h2 class="unnumbered" id="verification-commands">Verification
+Commands</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Command</strong></th>
+<th style="text-align: left;"><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>latex --version</code></td>
+<td style="text-align: left;">Show LaTeX version information</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pdflatex --version</code></td>
+<td style="text-align: left;">Show pdfTeX version</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tex --version</code></td>
+<td style="text-align: left;">Show TeX version</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tlmgr --version</code></td>
+<td style="text-align: left;">Show TeX Live Manager version</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 class="unnumbered"
+id="conclusion-tex-live-installation-methodology">Conclusion: TeX Live
+Installation Methodology</h1>
+<p>After comprehensive analysis of TeX Live installation methods, here
+is the structured methodology for successfully installing and
+configuring TeX Live:</p>
+<h2 class="unnumbered" id="installation-methods-comparison">1.
+Installation Methods Comparison</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Method</strong></th>
+<th style="text-align: left;"><strong>Platform</strong></th>
+<th style="text-align: left;"><strong>Advantages</strong></th>
+<th style="text-align: left;"><strong>Disadvantages</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Package Manager</td>
+<td style="text-align: left;">Linux, Windows (Choco)</td>
+<td style="text-align: left;">Easy, integrated</td>
+<td style="text-align: left;">May be outdated</td>
+</tr>
+<tr>
+<td style="text-align: left;">Manual Install</td>
+<td style="text-align: left;">All platforms</td>
+<td style="text-align: left;">Latest version, control</td>
+<td style="text-align: left;">Complex, manual steps</td>
+</tr>
+<tr>
+<td style="text-align: left;">MacTeX</td>
+<td style="text-align: left;">MacOS</td>
+<td style="text-align: left;">Optimized, tools included</td>
+<td style="text-align: left;">MacOS only</td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="recommended-installation-workflow">2.
+Recommended Installation Workflow</h2>
+<p><strong>Step : Choose installation method based on OS</strong></p>
+<ul>
+<li><p><strong>Linux (Ubuntu/Debian)</strong>:
+<code>sudo apt install texlive-full</code></p></li>
+<li><p><strong>Linux (others)</strong>: Manual installation or
+distribution packages</p></li>
+<li><p><strong>Windows</strong>: Manual installer or Chocolatey</p></li>
+<li><p><strong>MacOS</strong>: MacTeX from official website</p></li>
+</ul>

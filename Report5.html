@@ -1,0 +1,1142 @@
+<h1 id="sec:colspace">1ManipulatingThespaceBetweenColumns - Column
+Spacing</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\setlength\tabcolsep{1cm}
+
+\begin{document}
+\section{Introduction to space between columns}
+This space is defined with the length \verb|\tabcolsep|. Due
+to the fact that each column is padded on both sides you get one \verb|\tabcolsep|
+on either end of the table, and 2 \verb|\tabcolsep| between two columns one from each
+column. We can adjust this space to any length using  \verb|\setlength|.
+
+\begin{tabular}{lll}
+  Animal &amp; Food   &amp; Size   \\
+  dog    &amp; meat   &amp; medium \\
+  horse  &amp; hay    &amp; large  \\
+  frog   &amp; flies  &amp; small  \\
+\end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure">Generated figure</h2>
+<p>Table with increased column spacing (1cm).</p>
+<h2 class="unnumbered" id="screenshot">Screenshot</h2>
+<div class="center">
+<p><img src="1ManipulatingThespaceBetweenColumns.png"
+style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:numeric">2ndNumericAlignmentInColumns - Numeric
+Alignment</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\begin{document}
+
+\section{Commentary and Interpretation}
+Here I just try one eg in: package documentation Page 5,
+ Titre: 3.1 Numbers
+
+\begin{tabular}{SS}
+\toprule
+{Values} &amp;   {More Values} \\
+\midrule
+123           &amp;      \num{123}     \\
+1234           &amp;      \num{1234}    \\
+12345            &amp;      \num{12345}   \\
+0.123           &amp;      \num{0.123}   \\
+0,1234           &amp;      \num{0,1234}  \\
+0.12345            &amp;      \num{.12345}  \\
+\bottomrule
+\end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-1">Generated figure</h2>
+<p>Numeric alignment with siunitx package.</p>
+<h2 class="unnumbered" id="screenshot-1">Screenshot</h2>
+<div class="center">
+<p><img src="2ndNumericAlignmentInColumns.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:51">51TheArrayPackage - Basic Array Usage</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\begin{document}
+\section{Array}
+\begin{tabular}{lll}
+  Animal  &amp; Food  &amp;  Size   \\
+  dog     &amp; meat  &amp; medium  \\
+  horse   &amp; hay   &amp; large   \\
+  frog    &amp; flies &amp; small   \\
+\end{tabular}
+
+\section{My intepretation}
+~We can see three (03) Columns (Animals, Foods and Size) because of using Array Package: {array}
+
+~To succed this compillation we have to use at the begin (111 = &#39;3&#39; the number of the Column){tabular} 
+but at the end we have To use {tabular}.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-2">Generated figure</h2>
+<p>Basic table with three columns.</p>
+<h2 class="unnumbered" id="screenshot-2">Screenshot</h2>
+<div class="center">
+<p><img src="51TheArrayPackage.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:52">52TheArrayPackageALotOfText - Long Text in Columns</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+
+\begin{document}
+
+\section{Trying the type l.}
+
+We will see 2 Columns (c=Animal and l=left aligned column=Description) because of the use of: {tabular}{cl}
+\section{Array:2}
+\begin{tabular}{cl}
+  Animal  &amp; Description \\
+  dog     &amp; The dog is a member of the genus Canis,which forms part of the
+            wolf-like canids, and is the most widely abundant terrestrial carnivore. \\
+cat       &amp; The cat is a domestic species of small carnivorous mammal. It is the 
+            only domesticated species in the family Felidae and is often referred 
+            to as the domestic cat to distinguish it from the wild members of the
+            family. \\
+\end{tabular}
+
+\section{My intepretation}
+Here the issue is that the l type column typesets its contents in a single row at its natural
+width, even if there is a page border in the way.But we can correcte it.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-3">Generated figure</h2>
+<p>Table with long text in left-aligned column.</p>
+<h2 class="unnumbered" id="screenshot-3">Screenshot</h2>
+<div class="center">
+<p><img src="52TheArrayPackageALotOfText.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:53">53TheArrayPackageALotOfTextTypeCP - Paragraph Columns
+(9cm)</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+
+\begin{document}
+
+\section{Trying the type cp: {9cm.}}
+
+We will see 2 Columns (c=Animal and p=column fully justified=Description) because of the use of: {tabular}{cp}
+\section{Array:2}
+\begin{tabular}{cp{9cm}} % We are going to use &quot;cp&quot; to justifie the text
+  Animal  &amp; Description \\
+  dog     &amp; The dog is a member of the genus Canis, which forms
+      part of the
+          wolf-like canids, and is the most widely abundant
+            terrestrial
+          carnivore. \\
+  cat     &amp; The cat is a domestic species of small carnivorous
+     mammal. It is the
+          only domesticated species in the family Felidae and
+            is often referred
+          to as the domestic cat to distinguish it from the
+             wild members of the
+          family. \\
+\end{tabular}
+
+\section{My intepretation}
+Here the text will be
+automatically line wrapped and fully justified
+m{9cm} like p, but vertically centered compared to the rest of the
+row.
+will try for 5cm and see in the next file.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-4">Generated figure</h2>
+<p>Table with paragraph column (9cm width).</p>
+<h2 class="unnumbered" id="screenshot-4">Screenshot</h2>
+<div class="center">
+<p><img src="53TheArrayPackageALotOfTextTypeCP.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:53-5">53TheArrayPackageALotOfTextTypeCP5 - Paragraph Columns
+(5cm)</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+
+\begin{document}
+
+\section{Trying the type cp: {5cm.}}
+
+We will see 2 Columns (c=Animal and p=column fully justified=Description) because of the use of: {tabular}{cp}
+\section{Array:2}
+\begin{tabular}{cp{5cm}} % My own Eg to make justification between 5cm
+  Animal  &amp; Description \\
+  dog     &amp; The dog is a member of the genus Canis, which forms
+      part of the
+          wolf-like canids, and is the most widely abundant
+             terrestrial
+          carnivore. \\
+  cat     &amp; The cat is a domestic species of small carnivorous
+     mammal. It is the
+          only domesticated species in the family Felidae and
+             is often referred
+          to as the domestic cat to distinguish it from the
+             wild members of the
+          family. \\
+\end{tabular}
+
+\section{My intepretation}
+Here the text will be
+automatically line wrapped and fully justified
+m{5cm} like p, but vertically centered compared to the rest of the
+row.
+Here We  can see for 5cm.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-5">Generated figure</h2>
+<p>Table with narrower paragraph column (5cm width).</p>
+<h2 class="unnumbered" id="screenshot-5">Screenshot</h2>
+<div class="center">
+<p><img src="53TheArrayPackageALotOfTextTypeCP5.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:54">54TheArrayPackageTheSameType - Multiple Same Type
+Columns</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+
+\begin{document}
+
+\section{Trying the type cp:{6}{c} the same type}
+
+We will see 2 Columns: c=Animal and p=column fully justified=Description,
+because of the use of: \verb|{tabular}{6}{c}| same type.
+\section{Array:2}
+\begin{tabular}{6}{c} 
+  Animal  &amp; Description \\
+  dog     &amp; The dog is a member of the genus Canis, which forms
+      part of the
+          wolf-like canids, and is the most widely abundant
+            terrestrial
+          carnivore. \\
+  cat     &amp; The cat is a domestic species of small carnivorous
+     mammal. It is the
+          only domesticated species in the family Felidae and
+            is often referred
+          to as the domestic cat to distinguish it from the
+             wild members of the
+          family. \\
+\end{tabular}
+
+\section{My intepretation}
+Here the text will be
+automatically line wrapped and fully justified
+m{6cm} like p, but vertically centered compared to the rest of the
+row.And at the end the number of table has many columns of the same type.
+Here We  can see for {6}{c}cm.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-6">Generated figure</h2>
+<p>Table with multiple same-type columns (error demonstration).</p>
+<h2 class="unnumbered" id="screenshot-6">Screenshot</h2>
+<div class="center">
+<p><img src="54TheArrayPackageTheSameType.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:541">541TheArrayPackageEquivalC - Using
+*<span>n</span><span>type</span> Syntax</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\begin{document}
+
+\begin{tabular}{*{3}{l}}
+  Animal &amp; Food  &amp; Size    \\
+  dog    &amp; meat  &amp; medium  \\
+  horse  &amp; hay   &amp; large   \\
+  frog   &amp; flies &amp; small   \\
+\end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-7">Generated figure</h2>
+<p>Table with *<span>3</span><span>l</span> syntax for three
+left-aligned columns.</p>
+<h2 class="unnumbered" id="screenshot-7">Screenshot</h2>
+<div class="center">
+<p><img src="541TheArrayPackageEquivalC.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:55">55AddingRulesLines - Basic Table Rules</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+
+\section{Different types of lines:toprule, midrule, and bottomrule}
+
+\begin{tabular}{lll}
+  \toprule
+  Animal &amp; Food &amp; Size \\
+  \midrule
+  dog    &amp; meat  &amp; medium  \\
+  horse  &amp; hay   &amp; large   \\
+  frog   &amp; flies &amp; small   \\ 
+  \bottomrule
+\end{tabular}
+
+section{My commentary:}
+The use of these keys(toprule, midrule, and bottomrule) gives us the possibility to get 
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-8">Generated figure</h2>
+<p>Table with booktabs rules (toprule, midrule, bottomrule).</p>
+<h2 class="unnumbered" id="screenshot-8">Screenshot</h2>
+<div class="center">
+<p><img src="55AddingRulesLines.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:55-1">55AddingRulesLines1 - cmidrule Usage</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+The fourth rule command provided by booktabs is \verb|\cmidrule|. It can be used
+to draw a rule that doesn&#39;t span the entire width of the table but only a specified
+column range. A column range is entered as a number span: {number-number}.
+\begin{tabular}{lll}
+  \toprule
+ Animal &amp; Food &amp; Size \\
+  \midrule
+  dog &amp; meat &amp; medium \\
+  \cmidrule{1-2}
+  horse &amp; hay &amp; large \\
+  \cmidrule{1-1}
+  \cmidrule{3-3}
+  frog &amp; flies &amp; small \\
+  \bottomrule
+\end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-9">Generated figure</h2>
+<p>Table with partial rules using cmidrule.</p>
+<h2 class="unnumbered" id="screenshot-9">Screenshot</h2>
+<div class="center">
+<p><img src="55AddingRulesLines1.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:55-2">55AddingRulesLines2 - cmidrule with Trimming</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+
+There is another useful feature of \verb|\cmidrule|.
+We can shorten it on either end
+with an optional argument enclosed in parentheses:
+  \begin{tabular}{lll}
+  \toprule
+  Animal &amp; Food &amp; Size \\
+  \midrule
+  dog &amp; meat &amp; medium \\
+  \cmidrule{1-2}
+  horse &amp; hay &amp; large \\ 
+  \cmidrule(r){1-1}
+  \cmidrule(rl){2-2}
+  \cmidrule(l){3-3}
+  frog &amp; flies &amp; small \\
+  \bottomrule
+\end{tabular}
+We may have guessed that r and l mean the rule is shortened on its right and left
+end, respectively
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-10">Generated figure</h2>
+<p>Table with trimmed cmidrule rules.</p>
+<h2 class="unnumbered" id="screenshot-10">Screenshot</h2>
+<div class="center">
+<p><img src="55AddingRulesLines2.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:55-3">55AddingRulesLines3 - addlinespace Usage</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+
+\section{The meaning of booktabs:Rules Lines.}
+Sometimes a rule would be too much of a separation for two rows but to get across
+the meaning more clearly you want to separate them by some means. In this case
+we can use \\addlinespace to insert a small skip.
+\section{Animal and Description with the rules:}
+
+\begin{tabular}{cp{9cm}}
+  \toprule
+  Animal &amp; Description \\
+  \midrule
+           dog &amp; The dog is a member of the genus Canis, which forms part of the
+           wolf-like canids, and is the most widely abundant terrestrial carnivore. \\
+  \addlinespace
+           cat &amp; The cat is a domestic species of small carnivorous mammal. It is the
+           only domesticated species in the family Felidae and
+              is often referred
+           to as the domestic cat to distinguish it from the
+              wild members of the
+           family. \\
+  \bottomrule
+\end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-11">Generated figure</h2>
+<p>Table with vertical spacing using addlinespace.</p>
+<h2 class="unnumbered" id="screenshot-11">Screenshot</h2>
+<div class="center">
+<p><img src="55AddingRulesLines3.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:56">56MergingCells - Horizontal Cell Merging</h1>
+<pre><code>\documentclass{article}
+\usepackage{array, booktabs}
+
+\begin{document}
+
+\begin{tabular}{lcc}
+\toprule
+\multicolumn{1}{c}{Animal} &amp; Taille &amp; Poids \\
+\midrule
+Chien &amp; Moyen &amp; 15 kg \\
+Chat &amp; Petit &amp; 5 kg \\
+Éléphant &amp; Grand &amp; 5000 kg \\
+\bottomrule
+\end{tabular}
+
+\bigskip
+
+% Tableau avec fusion horizontale
+\begin{tabular}{|l|c|c|}
+\hline
+\multicolumn{3}{|c|}{Informations} \\
+\hline
+Nom &amp; Âge &amp; Ville \\
+\hline
+Alice &amp; 25 &amp; Paris \\
+Bob &amp; 30 &amp; Londres \\
+\hline
+\end{tabular}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-12">Generated figure</h2>
+<p>Tables with horizontally merged cells using multicolumn.</p>
+<h2 class="unnumbered" id="screenshot-12">Screenshot</h2>
+<div class="center">
+<p><img src="56MergingCells.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:56-2">56MergingCells2 - Vertical Merging Simulation</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+\section{Explication}
+Merging cells vertically isn&#39;t supported by LaTeX. Usually it suffices to leave cells
+empty to give the reader the correct idea of what was meant without explicitly
+making cells span rows.
+
+\begin{tabular}{lll}
+ \toprule
+ Group &amp; Animal &amp; Size \\
+ \midrule
+ herbivore &amp; horse &amp; large \\
+           &amp; deer &amp; medium \\
+           &amp; rabbit &amp; small \\
+ \addlinespace
+ carnivore &amp; dog &amp; medium \\
+           &amp; cat &amp; small \\
+           &amp; lion &amp; large \\
+ \addlinespace
+ omnivore  &amp; crow &amp; small \\
+           &amp; bear &amp; large \\
+           &amp; pig &amp; medium \\
+ \bottomrule
+ \end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-13">Generated figure</h2>
+<p>Table simulating vertical merging with empty cells.</p>
+<h2 class="unnumbered" id="screenshot-13">Screenshot</h2>
+<div class="center">
+<p><img src="56MergingCells2.png" style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:571">571StylingAColumn - Column Styling</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+\begin{document}
+\begin{tabular}{&gt;{\itshape}l&lt;{:} *{2}{l}}
+  \toprule
+  Animal &amp; Food &amp; Size \\
+  \midrule
+  dog &amp; meat &amp; medium \\
+  horse &amp; hay &amp; large \\
+  frog &amp; flies &amp; small \\
+  \bottomrule
+\end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-14">Generated figure</h2>
+<p>Table with italic first column and colon separator.</p>
+<h2 class="unnumbered" id="screenshot-14">Screenshot</h2>
+<div class="center">
+<p><img src="571StylingAColumn.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:572">572StylingAColumn - Header Exclusion from Styling</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+\begin{tabular}{&gt;{\itshape}l&lt;{:} *{2}{l}}
+  \toprule
+  \multicolumn{1}{l}{Animal} &amp; Food &amp; Size \\
+  \midrule
+  dog &amp; meat &amp; medium \\
+  horse &amp; hay &amp; large \\
+  frog &amp; flies &amp; small \\
+  \bottomrule
+
+We may want the first cell not to be affected because it is the table head.
+Here \\multicolumn may be used
+\end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-15">Generated figure</h2>
+<p>Table with header excluded from column styling.</p>
+<h2 class="unnumbered" id="screenshot-15">Screenshot</h2>
+<div class="center">
+<p><img src="572StylingAColumn.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:573">573StylingAColumn - @<span>...</span> Syntax</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\begin{document}
+\begin{tabular}{l@{ : }l@{\hspace{2cm}}l}
+  Animal &amp; Food &amp; Size \\
+  dog &amp; meat &amp; medium \\
+  horse &amp; hay &amp; large \\
+  frog &amp; flies &amp; small \\
+
+section{Commentary:}
+This preamble token does something pretty similar. The difference is, that it adds
+its argument in center of the space between two columns.  
+\end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-16">Generated figure</h2>
+<p>Table with custom column separators.</p>
+<h2 class="unnumbered" id="screenshot-16">Screenshot</h2>
+<div class="center">
+<p><img src="573StylingAColumn.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:581">581StylingAColumnvertical - Vertical Rules</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+
+\begin{document}
+\begin{tabular}{l|ll}
+  Animal &amp; Food  &amp; Size   \\[2pt]
+  dog    &amp; meat  &amp; medium \\
+  horse  &amp; hay   &amp; large  \\
+  frog   &amp; flies &amp; small  \\
+\end{tabular}
+\section{Intepretation}: We might notice that the behavior of this implementation is pretty similar to \\{decl}; it adds the
+vertical rule between two columns leaving the padding as it is.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-17">Generated figure</h2>
+<p>Table with vertical rule and row spacing.</p>
+<h2 class="unnumbered" id="screenshot-17">Screenshot</h2>
+<div class="center">
+<p><img src="581StylingAColumnvertical.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:591">591CustomizingRooktabsRules - Custom Rule
+Thickness</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+
+ \begin{tabular}{@{} lll@{}} \toprule[2pt]
+   Animal &amp; Food &amp; Size \\ \midrule[1pt]
+   dog &amp; meat &amp; medium \\
+   \cmidrule[0.5pt](r{1pt}l{1cm}){1-2}
+   horse &amp; hay &amp; large \\
+   frog &amp; flies &amp; small \\ \bottomrule[2pt]
+\end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-18">Generated figure</h2>
+<p>Table with customized rule thickness.</p>
+<h2 class="unnumbered" id="screenshot-18">Screenshot</h2>
+<div class="center">
+<p><img src="591CustomizingRooktabsRules.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:600">600NumericAlignmentInColumns - Numeric Alignment with
+siunitx</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\begin{document}
+\begin{tabular}{SS}
+\toprule
+{Values} &amp;   {More Values} \\
+\midrule
+1        &amp;    2.3456 \\
+1.2      &amp;    34.2345 \\
+-2.3     &amp;    90.473 \\
+40       &amp;    5642.5 \\
+5.3      &amp;    1.2e3 \\
+0.2      &amp;    1e4 \\
+\bottomrule
+\end{tabular}
+\section{Commentary and Interpretation}
+Here, before succeed to run the file,
+i was oblige to install the paquets siunitx.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-19">Generated figure</h2>
+<p>Table with numeric alignment using siunitx S columns.</p>
+<h2 class="unnumbered" id="screenshot-19">Screenshot</h2>
+<div class="center">
+<p><img src="600NumericAlignmentInColumns.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:601x">601SpecifyingTotalTableWidthtabularx - tabularx
+Environment</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\begin{document}
+
+The tabularx environment, provided by the package of the same name, has a
+similar syntax to tabular* but instead of adjusting the inter-column space, adjusts
+the widths of columns specified by a new column type, X. This is equivalent to a
+specification of p{...} for an automatically determined width.
+
+\begin{center}
+\begin{tabular}{lp{2cm}}
+\hline
+A &amp; B B B B B B B B B B B B B B B B B B B B B B B B\\
+C &amp; D D D D D D D\\
+\hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabularx}{.5\textwidth}{lX}
+\hline
+A &amp; B B B B B B B B B B B B B B B B B B B B B B B B\\
+C &amp; D D D D D D D\\
+\hline
+\end{tabularx}
+
+\end{center}
+\begin{center}
+\begin{tabularx}{\textwidth}{lX}
+\hline
+A &amp; B B B B B B B B B B B B B B B B B B B B B B B B\\
+C &amp; D D D D D D D\\
+\hline
+\end{tabularx}
+\end{center}
+\section{Commentary and intepretation} 
+  The tabularx environment, provided by the package of the same name, has a
+similar syntax to tabular* but instead of adjusting the inter-column space, adjusts
+the widths of columns specified by a new column type, X. This is equivalent to a
+specification of p{...} for an automatically determined width.
+\section{Conlusion}
+Unlike the other forms discussed in these lessons, tabularx needs to typeset the
+table several times with trial widths to determine the final setting. This means
+that there are several restrictions on the use of the environment; We can see the package
+documentation to learn about its.
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-20">Generated figure</h2>
+<p>Tables demonstrating tabularx with X columns.</p>
+<h2 class="unnumbered" id="screenshot-20">Screenshot</h2>
+<div class="center">
+<p><img src="601SpecifyingTotalTableWidthtabularx.png"
+style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:602notes">602MultiPagesTableNotes - Table with Notes</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{threeparttable}
+\begin{document}
+
+\begin{table}
+\begin{threeparttable}
+   \caption{An Example}
+   \begin{tabular}{ll}
+    An entry &amp; 42\tnote{1}\\
+    Another entry &amp; 24\tnote{2}\\
+   \end{tabular}
+   \begin{tablenotes}
+   \item [1] the first note.
+   \item [2] the second note.
+   \end{tablenotes}
+\end{threeparttable}
+\end{table}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-21">Generated figure</h2>
+<p>Table with footnotes using threeparttable.</p>
+<h2 class="unnumbered" id="screenshot-21">Screenshot</h2>
+<div class="center">
+<p><img src="602MultiPagesTableNotes.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:602long">602Multi-PageTablesLongtablePackage - Longtable
+Example</h1>
+<pre><code>\documentclass{article}
+\usepackage[paperheight=8cm,paperwidth=8cm]{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\begin{document}
+
+\begin{longtable}{cc}
+\caption{A Long Table} \\
+Left Side &amp; Right Side\\
+\hline
+\endfirsthead
+
+\multicolumn{2}{c}{\tablename\ \thetable\ (continued)} \\
+Left Side &amp; Right Side\\
+\hline
+\endhead
+
+\hline
+\endfoot
+\hline
+\endlastfoot
+
+aa &amp; bb\\
+Entry &amp; b\\
+a &amp; b\\
+a &amp; b\\
+a &amp; b\\
+a &amp; b\\
+a &amp; b\\
+a &amp; bbb\\
+a &amp; b\\
+a &amp; b\\
+a &amp; b\\
+a &amp; b\\
+a &amp; b\\
+a &amp; b\\
+a &amp; b b b b b b\\
+a &amp; b b b b b\\
+a &amp; b b\\
+A Wider Entry &amp; b\\
+\end{longtable}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-22">Generated figure</h2>
+<p>Multi-page table using longtable package.</p>
+<h2 class="unnumbered" id="screenshot-22">Screenshot</h2>
+<div class="center">
+<p><img src="602Multi-PageTablesLongtablePackage.png"
+style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:603">603TypesettingInNarrowColumns - Text in Narrow
+Columns</h1>
+<pre><code>\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{ragged2e}
+\begin{document}
+
+\begin{table}
+    
+\begin{tabular}[t]{lp{3cm}}
+One &amp; A long text set in a narrow paragraph, with some more
+   example text.\\
+Two &amp; A different long text set in a narrow paragraph, with
+   some more hard to hyphenate words.
+\end{tabular}%
+\begin{tabular}[t]{l&gt;{\raggedright\arraybackslash}p{3cm}}
+One &amp; A long text set in a narrow paragraph, with some more
+   example text.\\
+Two &amp; A different long text set in a narrow paragraph, with
+   some more hard to hyphenate words.
+\end{tabular}%
+\begin{tabular}[t]{l&gt;{\RaggedRight}p{3cm}}
+One &amp; A long text set in a narrow paragraph, with some more
+   example text.\\
+Two &amp; A different long text set in a narrow paragraph, with
+   some more hard to hyphenate words.
+\end{tabular}
+\footnotesize
+\begin{tabular}[t]{lp{3cm}}
+One &amp; A long text set in a narrow paragraph, with some more
+   example text.\\
+Two &amp; A different long text set in a narrow paragraph, with
+   some more hard to hyphenate words.
+\end{tabular}
+
+\end{table}
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-23">Generated figure</h2>
+<p>Tables with text in narrow columns and different text alignment.</p>
+<h2 class="unnumbered" id="screenshot-23">Screenshot</h2>
+<div class="center">
+<p><img src="603TypesettingInNarrowColumns.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:605">605ControlVerticalTricks - Vertical Alignment
+Control</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+\begin{tabular}{lcc}
+  \toprule
+  Test &amp; \begin{tabular}[b]{@{}c@{}}A\\a\end{tabular} &amp;
+     \begin{tabular}[t]{@{}c@{}}B\\b\end{tabular} \\
+  \midrule
+  Content &amp; is &amp; here \\
+  Content &amp; is &amp; here \\
+  Content &amp; is &amp; here \\
+  \bottomrule
+\end{tabular}
+We Note that We can control vertical alignment by an optional argument to the tabular;
+it supports the usage of t, c, or b for top, centered,or bottom aligned respectively.
+
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-24">Generated figure</h2>
+<p>Table with nested tables demonstrating vertical alignment.</p>
+<h2 class="unnumbered" id="screenshot-24">Screenshot</h2>
+<div class="center">
+<p><img src="605ControlVerticalTricks.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:605v">605VerticalTricks - Nested Tables</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+\begin{tabular}{lcc}
+  \toprule
+  Test &amp; \begin{tabular}{@{}c@{}}A\\a\end{tabular} &amp;
+         \begin{tabular}{@{}c@{}}B\\b\end{tabular} \\
+  \midrule
+  Content &amp; is &amp; here \\
+  Content &amp; is &amp; here \\
+  Content &amp; is &amp; here \\
+  \bottomrule
+\end{tabular}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-25">Generated figure</h2>
+<p>Table with centered nested tables.</p>
+<h2 class="unnumbered" id="screenshot-25">Screenshot</h2>
+<div class="center">
+<p><img src="605VerticalTricks.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:606">606LineSpacingInTables - Line Spacing Control</h1>
+<pre><code>\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\begin{document}
+
+\begin{center}
+\begin{tabular}{cc}
+\hline
+Square&amp; $x^2$\\
+\hline
+Cube&amp; $x^3$\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\setlength\extrarowheight{2pt}
+\begin{tabular}{cc}
+\hline
+Square&amp; $x^2$\\
+\hline
+Cube&amp; $x^3$\\
+\hline
+\end{tabular}
+\end{center}
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-26">Generated figure</h2>
+<p>Tables demonstrating line spacing control with extrarowheight.</p>
+<h2 class="unnumbered" id="screenshot-26">Screenshot</h2>
+<div class="center">
+<p><img src="606LineSpacingInTables.png" style="width:80.0%"
+alt="image" /></p>
+</div>
+<hr />
+<h1 id="sec:601">601SpecifyingTotalTableWidthtabular - Fixed Width
+Tables</h1>
+<pre><code>\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\begin{document}
+
+\begin{center}
+\begin{tabular}{cc}
+\hline
+A &amp; B\\
+C &amp; D\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular*}{.5\textwidth}{@{\extracolsep{\fill}}cc@{}}
+\hline
+A &amp; B\\
+C &amp; D\\
+\hline
+\end{tabular*}
+
+\end{center}
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cc@{}}
+\hline
+A &amp; B\\
+C &amp; D\\
+\hline
+\end{tabular*}
+\end{center}
+\ The tabular* environment takes an additional width argument that specifies
+the total width of the table. Stretchy space must be added to the table 
+using the \verb|\extracolsep| command. This space is added between all columns from that
+point in the preamble. It is almost always used with \verb|\fill| a special space that
+stretches to be as large as necessary
+\end{document}</code></pre>
+<h2 class="unnumbered" id="generated-figure-27">Generated figure</h2>
+<p>Tables with specified total width using tabular*.</p>
+<h2 class="unnumbered" id="screenshot-27">Screenshot</h2>
+<div class="center">
+<p><img src="601SpecifyingTotalTableWidthtabular.png"
+style="width:80.0%" alt="image" /></p>
+</div>
+<hr />
+<h1 class="unnumbered"
+id="conclusion-methodology-for-creating-tables">Conclusion: Methodology
+for Creating Tables</h1>
+<p>After comprehensive analysis of table examples, here is the
+structured methodology for creating effective tables:</p>
+<h2 class="unnumbered" id="essential-table-structure">1. Essential table
+structure</h2>
+<pre><code>\begin{tabular}{column specifications}
+  \toprule
+  Header1 &amp; Header2 &amp; Header3 \\
+  \midrule
+  Data1   &amp; Data2   &amp; Data3   \\
+  Data4   &amp; Data5   &amp; Data6   \\
+  \bottomrule
+\end{tabular}</code></pre>
+<h2 class="unnumbered" id="column-type-specifications">2. Column type
+specifications</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Type</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"><strong>Use Case</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">l</td>
+<td style="text-align: left;">Left-aligned column</td>
+<td style="text-align: left;">Text data, labels</td>
+</tr>
+<tr>
+<td style="text-align: left;">c</td>
+<td style="text-align: left;">Centered column</td>
+<td style="text-align: left;">Numbers, short text</td>
+</tr>
+<tr>
+<td style="text-align: left;">r</td>
+<td style="text-align: left;">Right-aligned column</td>
+<td style="text-align: left;">Numbers, dates</td>
+</tr>
+<tr>
+<td style="text-align: left;">p{width}</td>
+<td style="text-align: left;">Paragraph column</td>
+<td style="text-align: left;">Long text, descriptions</td>
+</tr>
+<tr>
+<td style="text-align: left;">m{width}</td>
+<td style="text-align: left;">Middle-aligned paragraph</td>
+<td style="text-align: left;">Text with vertical centering</td>
+</tr>
+<tr>
+<td style="text-align: left;">b{width}</td>
+<td style="text-align: left;">Bottom-aligned paragraph</td>
+<td style="text-align: left;">Special layouts</td>
+</tr>
+<tr>
+<td style="text-align: left;">S</td>
+<td style="text-align: left;">Numeric alignment (siunitx)</td>
+<td style="text-align: left;">Decimal numbers, scientific notation</td>
+</tr>
+<tr>
+<td style="text-align: left;">X</td>
+<td style="text-align: left;">Automatic width (tabularx)</td>
+<td style="text-align: left;">Flexible column widths</td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="recommended-workflow">3. Recommended
+workflow</h2>
+<p><strong>Step 1: Plan table structure</strong></p>
+<ul>
+<li><p>Determine number of columns and rows</p></li>
+<li><p>Choose appropriate column types</p></li>
+<li><p>Consider table width and alignment</p></li>
+</ul>
+<p><strong>Step 2: Create basic table</strong></p>
+<ol>
+<li><p>Set up tabular environment with column specifications</p></li>
+<li><p>Add headers</p></li>
+<li><p>Insert data rows</p></li>
+</ol>
+<p><strong>Step 3: Enhance appearance</strong></p>
+<ul>
+<li><p>Add rules (toprule, midrule, bottomrule, cmidrule)</p></li>
+<li><p>Adjust column spacing (tabcolsep)</p></li>
+<li><p>Style columns (&gt;, &lt;, @)</p></li>
+<li><p>Add vertical spacing (addlinespace, [dim])</p></li>
+</ul>
+<p><strong>Step 4: Test and refine</strong></p>
+<ul>
+<li><p>Check width and alignment</p></li>
+<li><p>Verify readability</p></li>
+<li><p>Test with different data</p></li>
+</ul>
+<h2 class="unnumbered" id="advanced-techniques">4. Advanced
+techniques</h2>
+<div class="framed">
+<p><strong>Key advanced features:</strong></p>
+<p>1. <strong>Multi-column cells</strong>:
+<code>\multicolumn{n}{type}{content}</code></p>
+<p>2. <strong>Column styling</strong>: <code>&gt;{\itshape}l</code> for
+italic first column</p>
+<p>3. <strong>Custom separators</strong>: <code>@{ : }</code> for colon
+separator</p>
+<p>4. <strong>Fixed width tables</strong>: <code>tabular*</code> with
+<code>\extracolsep{\fill}</code></p>
+<p>5. <strong>Vertical alignment</strong>: Optional argument
+<code>[t]</code>, <code>[c]</code>, <code>[b]</code> to tabular</p>
+<p>6. <strong>Numeric formatting</strong>: siunitx package for decimal
+alignment</p>
+<p>7. <strong>Multi-page tables</strong>: longtable package for tables
+spanning pages</p>
+<p>8. <strong>Table notes</strong>: threeparttable package for
+footnotes</p>
+</div>
+<h2 class="unnumbered" id="best-practices">5. Best practices</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Practice</strong></th>
+<th style="text-align: left;"><strong>Benefit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Use booktabs for rules</td>
+<td style="text-align: left;">Professional appearance, proper
+spacing</td>
+</tr>
+<tr>
+<td style="text-align: left;">Consistent alignment</td>
+<td style="text-align: left;">Improved readability</td>
+</tr>
+<tr>
+<td style="text-align: left;">Appropriate column widths</td>
+<td style="text-align: left;">Balanced layout</td>
+</tr>
+<tr>
+<td style="text-align: left;">Minimal vertical rules</td>
+<td style="text-align: left;">Clean, modern look</td>
+</tr>
+<tr>
+<td style="text-align: left;">Proper header styling</td>
+<td style="text-align: left;">Clear data organization</td>
+</tr>
+<tr>
+<td style="text-align: left;">Adequate spacing</td>
+<td style="text-align: left;">Easy to read and interpret</td>
+</tr>
+<tr>
+<td style="text-align: left;">Use X columns for flexibility</td>
+<td style="text-align: left;">Automatic width adjustment</td>
+</tr>
+</tbody>
+</table>
+<h2 class="unnumbered" id="common-issues-and-solutions">6. Common issues
+and solutions</h2>
+<ul>
+<li><p><strong>Overfull hboxes</strong>: Adjust column widths or use
+tabularx</p></li>
+<li><p><strong>Poor text wrapping</strong>: Use p{width} column type or
+ragged2e</p></li>
+<li><p><strong>Uneven spacing</strong>: Adjust tabcolsep or use @
+syntax</p></li>
+<li><p><strong>Vertical alignment issues</strong>: Use m{width} or
+vertical position optional argument</p></li>
+<li><p><strong>Decimal misalignment</strong>: Use siunitx S column
+type</p></li>
+<li><p><strong>Multi-page tables</strong>: Use longtable instead of
+tabular</p></li>
+<li><p><strong>Table notes</strong>: Use threeparttable for proper
+footnote placement</p></li>
+</ul>
+<p><strong>Final recommendation</strong>: Start with simple tables using
+basic column types, gradually incorporate advanced features as needed,
+and always prioritize clarity and readability. Well-designed tables
+effectively communicate complex data and enhance document
+professionalism.</p>
